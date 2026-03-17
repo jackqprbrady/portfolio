@@ -46,7 +46,7 @@ const conversionCards = [
     category: "Conversion",
   },
   {
-    embed: "https://www.youtube.com/embed/GCe9t_cguQ",
+    embed: "https://www.youtube.com/embed/ECplp93J270",
     title: "Super Sub",
     summary: "A product mechanic turned into a fan-friendly moment.",
     context: "A campaign showing how bets carry over to substitute players.",
