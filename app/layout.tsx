@@ -1,19 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display, Barlow_Condensed } from "next/font/google";
+import { Inter_Tight, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-
-const dmSerif = DM_Serif_Display({
+const inter = Inter_Tight({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-serif",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-inter",
   display: "swap",
 });
 
 const barlow = Barlow_Condensed({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["400", "600", "700", "800"],
   variable: "--font-condensed",
   display: "swap",
 });
@@ -26,7 +24,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${dmSerif.variable} ${barlow.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${barlow.variable}`}>{children}</body>
     </html>
   );
 }

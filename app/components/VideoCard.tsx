@@ -17,62 +17,85 @@ export default function VideoCard({ embed, title, summary, context, lens, catego
 
   return (
     <div style={{
-      background: "#0d0d0d",
-      border: "1px solid #1c1c1c",
-      borderTop: "2px solid var(--blue)",
-      borderRadius: "8px",
+      background: "#0a0a0a",
+      border: "1px solid rgba(255,255,255,0.07)",
+      borderTop: "2px solid #1A04FF",
+      borderRadius: "4px",
       overflow: "hidden",
     }}>
-      {/* Video with category tag */}
+      {/* Video */}
       <div className="video-wrapper">
         <iframe src={embed} title={title} allowFullScreen allow="fullscreen; picture-in-picture" />
         <span className="video-tag">{category}</span>
       </div>
 
-      <div style={{ padding: "12px 14px 14px" }}>
-        <p style={{ fontSize: "0.875rem", fontWeight: 600, color: "#e0e0e0", lineHeight: 1.3, marginBottom: "4px" }}>
+      <div style={{ padding: "14px 16px 16px" }}>
+        <p style={{
+          fontFamily: "var(--font-condensed), sans-serif",
+          fontWeight: 800,
+          fontSize: "0.9375rem",
+          textTransform: "uppercase",
+          letterSpacing: "-0.01em",
+          color: "#e8e8e8",
+          lineHeight: 1.15,
+          marginBottom: "6px",
+        }}>
           {title}
         </p>
-        <p style={{ fontSize: "0.8125rem", color: "#4a4a4a", lineHeight: 1.5 }}>
+        <p style={{
+          fontSize: "0.8125rem",
+          color: "rgba(255,255,255,0.35)",
+          lineHeight: 1.55,
+        }}>
           {summary}
         </p>
 
-        {/* Pill expand button — Enhanced style */}
+        {/* Expand pill */}
         <button
           onClick={() => setOpen(v => !v)}
           style={{
             display: "inline-flex",
             alignItems: "center",
-            gap: "6px",
+            gap: "5px",
             marginTop: "12px",
             padding: "5px 12px",
-            borderRadius: "9999px",
-            border: "1px solid #252525",
+            borderRadius: "1600px",
+            border: "1px solid rgba(255,255,255,0.12)",
             background: "none",
             cursor: "pointer",
-            color: "#4a4a4a",
-            fontSize: "0.625rem",
-            letterSpacing: "0.1em",
+            color: "rgba(255,255,255,0.3)",
+            fontSize: "0.5625rem",
+            letterSpacing: "0.14em",
             textTransform: "uppercase",
             fontFamily: "var(--font-condensed), sans-serif",
             fontWeight: 700,
             transition: "border-color 0.15s, color 0.15s",
           }}
           onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--blue)";
-            (e.currentTarget as HTMLButtonElement).style.color = "var(--blue)";
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "#1A04FF";
+            (e.currentTarget as HTMLButtonElement).style.color = "#1A04FF";
           }}
           onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.borderColor = "#252525";
-            (e.currentTarget as HTMLButtonElement).style.color = "#4a4a4a";
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.12)";
+            (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.3)";
           }}
         >
           Behind this
-          <ChevronDown size={10} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
+          <ChevronDown
+            size={9}
+            style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}
+          />
         </button>
 
         {open && (
-          <div style={{ marginTop: "14px", display: "flex", flexDirection: "column", gap: "12px", borderTop: "1px solid #1a1a1a", paddingTop: "14px" }}>
+          <div style={{
+            marginTop: "14px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "14px",
+            borderTop: "1px solid rgba(255,255,255,0.07)",
+            paddingTop: "14px",
+          }}>
             <InfoRow label="Context" value={context} />
             <InfoRow label="My lens" value={lens} />
           </div>
@@ -90,13 +113,15 @@ function InfoRow({ label, value }: { label: string; value: string }) {
         fontWeight: 700,
         fontSize: "0.5625rem",
         textTransform: "uppercase",
-        letterSpacing: "0.15em",
-        color: "#333",
+        letterSpacing: "0.18em",
+        color: "rgba(255,255,255,0.25)",
         marginBottom: "4px",
       }}>
         {label}
       </p>
-      <p style={{ fontSize: "0.8125rem", color: "#666", lineHeight: 1.55 }}>{value}</p>
+      <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.55 }}>
+        {value}
+      </p>
     </div>
   );
 }

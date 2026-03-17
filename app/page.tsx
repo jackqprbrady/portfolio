@@ -74,177 +74,237 @@ const ideas = [
 
 export default function Home() {
   return (
-    <main style={{ background: "#0a0a0a", minHeight: "100vh" }}>
+    <main>
+
+      {/* ── NAV ── */}
+      <nav className="nav">
+        <div className="nav-logo">
+          <EnhancedMark color="#1A04FF" />
+          Jack Brady
+          <span className="nav-tagline">Creative Strategy &amp; Film</span>
+        </div>
+        <a href="mailto:jackqprbrady@gmail.com" className="nav-cta">
+          Get in touch
+        </a>
+      </nav>
 
       {/* ── HERO ── */}
-      <div className="container" style={{ paddingTop: "72px", paddingBottom: "56px" }}>
-        <p style={{
-          fontFamily: "var(--font-condensed), sans-serif",
-          fontWeight: 700,
-          fontSize: "0.6875rem",
-          letterSpacing: "0.25em",
-          textTransform: "uppercase",
-          color: "#333",
-          marginBottom: "28px",
-        }}>
-          Jack Brady · Creative Strategy & Film
-        </p>
-
-        <h1 style={{
-          fontFamily: "var(--font-serif)",
-          fontSize: "clamp(2rem, 3.2vw, 2.875rem)",
-          fontWeight: 400,
-          lineHeight: 1.15,
-          letterSpacing: "-0.02em",
-          color: "#e8e8e8",
-          maxWidth: "600px",
-          marginBottom: "24px",
-        }}>
-          Turning Skepticism Into Curiosity — and Curiosity Into Action.
-        </h1>
-
-        <p style={{
-          fontSize: "0.9375rem",
-          lineHeight: 1.75,
-          color: "#4a4a4a",
-          maxWidth: "440px",
-        }}>
-          I've spent years in a category few people trust — making work that earns
-          attention rather than demanding it.
-        </p>
-      </div>
-
-      <hr className="divider" />
-
-      {/* ── NARRATIVE / CULTURAL ── */}
-      <div className="container" style={{ paddingTop: "36px", paddingBottom: "48px" }}>
-        <p className="section-label" style={{ marginBottom: "20px" }}>
-          <span className="num">01</span>Narrative / Cultural
-        </p>
-        <div className="video-grid">
-          {narrativeCards.map(c => <VideoCard key={c.title} {...c} />)}
-        </div>
-      </div>
-
-      <hr className="divider" />
-
-      {/* ── PAID / CTA / CONVERSION ── */}
-      <div className="container" style={{ paddingTop: "36px", paddingBottom: "48px" }}>
-        <p className="section-label" style={{ marginBottom: "20px" }}>
-          <span className="num">02</span>Paid / CTA / Conversion
-        </p>
-        <div className="video-grid">
-          {conversionCards.map(c => <VideoCard key={c.title} {...c} />)}
-        </div>
-      </div>
-
-      <hr className="divider" />
-
-      {/* ── ON ENHANCED ── */}
-      <div className="container" style={{ paddingTop: "48px", paddingBottom: "80px" }}>
-
-        {/* ≡+ ENHANCED — styled like their nav logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "28px" }}>
-          <EnhancedMark />
-          <span style={{
+      <section style={{
+        background: "var(--black)",
+        paddingTop: "136px",
+        paddingBottom: "96px",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
+      }}>
+        <div className="container">
+          <p style={{
             fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 800,
-            fontSize: "0.875rem",
+            fontWeight: 700,
+            fontSize: "0.625rem",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "var(--blue)",
+            color: "rgba(255,255,255,0.3)",
+            marginBottom: "32px",
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
           }}>
-            Enhanced
-          </span>
+            <span style={{ display: "block", width: "20px", height: "1px", background: "rgba(255,255,255,0.25)" }} />
+            Betting &amp; Sports · 10+ Years
+          </p>
+
+          <h1 style={{
+            fontFamily: "var(--font-condensed), sans-serif",
+            fontWeight: 800,
+            fontSize: "clamp(3.25rem, 6.5vw, 6rem)",
+            textTransform: "uppercase",
+            letterSpacing: "-0.03em",
+            lineHeight: 0.92,
+            color: "#fff",
+            maxWidth: "820px",
+            marginBottom: "40px",
+          }}>
+            Turning Skepticism<br />Into Curiosity —<br />And Curiosity<br />Into Action.
+          </h1>
+
+          <p style={{
+            fontSize: "0.9375rem",
+            lineHeight: 1.75,
+            color: "rgba(255,255,255,0.45)",
+            maxWidth: "420px",
+          }}>
+            I&apos;ve spent years in a category few people trust — making work that earns
+            attention rather than demanding it.
+          </p>
         </div>
+      </section>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "start" }}>
+      {/* ── NARRATIVE / CULTURAL ── */}
+      <section style={{
+        background: "var(--black)",
+        paddingTop: "52px",
+        paddingBottom: "72px",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
+      }}>
+        <div className="container">
+          <p className="section-label">Narrative / Cultural</p>
+          <div className="video-grid">
+            {narrativeCards.map(c => <VideoCard key={c.title} {...c} />)}
+          </div>
+        </div>
+      </section>
 
-          {/* Left — text */}
-          <div>
-            <h2 style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "clamp(1.375rem, 2vw, 1.75rem)",
-              fontWeight: 400,
-              lineHeight: 1.35,
-              letterSpacing: "-0.015em",
-              color: "#e0e0e0",
-              marginBottom: "16px",
+      {/* ── PAID / CTA / CONVERSION ── */}
+      <section style={{
+        background: "#050505",
+        paddingTop: "52px",
+        paddingBottom: "72px",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
+      }}>
+        <div className="container">
+          <p className="section-label">Paid / CTA / Conversion</p>
+          <div className="video-grid">
+            {conversionCards.map(c => <VideoCard key={c.title} {...c} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* ── ON ENHANCED ── */}
+      <section style={{ background: "var(--blue)", paddingTop: "80px", paddingBottom: "80px" }}>
+        <div className="container">
+
+          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "48px" }}>
+            <EnhancedMark color="#fff" />
+            <span style={{
+              fontFamily: "var(--font-condensed), sans-serif",
+              fontWeight: 800,
+              fontSize: "0.6875rem",
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.55)",
             }}>
-              The category has a framing problem, not an awareness one.
-            </h2>
-            <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#4a4a4a" }}>
-              Most people arrive skeptical. The interesting work shifts that before anyone's
-              tried to explain the product. A few things I'd look at:
-            </p>
+              Enhanced
+            </span>
           </div>
 
-          {/* Right — idea table, Enhanced data-block style */}
-          <div>
-            {ideas.map((idea, i) => (
-              <div key={idea.label} style={{
-                paddingTop: i === 0 ? 0 : "20px",
-                paddingBottom: "20px",
-                borderBottom: i < ideas.length - 1 ? "1px solid #1a1a1a" : "none",
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "80px",
+            alignItems: "start",
+          }}>
+
+            {/* Left — headline + subtext */}
+            <div>
+              <h2 style={{
+                fontFamily: "var(--font-condensed), sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(1.875rem, 2.8vw, 2.75rem)",
+                textTransform: "uppercase",
+                letterSpacing: "-0.025em",
+                lineHeight: 0.95,
+                color: "#fff",
+                marginBottom: "24px",
               }}>
-                <p style={{
-                  fontFamily: "var(--font-condensed), sans-serif",
-                  fontWeight: 700,
-                  fontSize: "0.5625rem",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.18em",
-                  color: "var(--blue)",
-                  opacity: 0.6,
-                  marginBottom: "6px",
-                }}>
-                  {idea.label}
-                </p>
-                <p style={{
-                  fontFamily: "var(--font-condensed), sans-serif",
-                  fontWeight: 700,
-                  fontSize: "1rem",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.05em",
-                  color: "#c0c0c0",
-                  marginBottom: "6px",
-                  lineHeight: 1.2,
-                }}>
-                  {idea.title}
-                </p>
-                <p style={{ fontSize: "0.8125rem", color: "#4a4a4a", lineHeight: 1.6 }}>
-                  {idea.body}
-                </p>
-              </div>
-            ))}
-          </div>
+                The Category Has A Framing Problem, Not An Awareness One.
+              </h2>
+              <p style={{
+                fontSize: "0.9375rem",
+                lineHeight: 1.75,
+                color: "rgba(255,255,255,0.6)",
+              }}>
+                Most people arrive skeptical. The interesting work shifts that before
+                anyone&apos;s tried to explain the product. A few directions I&apos;d look at:
+              </p>
+            </div>
 
+            {/* Right — idea list */}
+            <div>
+              {ideas.map((idea, i) => (
+                <div key={idea.label} style={{
+                  paddingTop: i === 0 ? 0 : "24px",
+                  paddingBottom: "24px",
+                  borderBottom: i < ideas.length - 1 ? "1px solid rgba(255,255,255,0.18)" : "none",
+                }}>
+                  <p style={{
+                    fontFamily: "var(--font-condensed), sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.5625rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.2em",
+                    color: "rgba(255,255,255,0.45)",
+                    marginBottom: "8px",
+                  }}>
+                    {idea.label}
+                  </p>
+                  <p style={{
+                    fontFamily: "var(--font-condensed), sans-serif",
+                    fontWeight: 800,
+                    fontSize: "1.125rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "-0.01em",
+                    lineHeight: 1.05,
+                    color: "#fff",
+                    marginBottom: "8px",
+                  }}>
+                    {idea.title}
+                  </p>
+                  <p style={{
+                    fontSize: "0.875rem",
+                    color: "rgba(255,255,255,0.6)",
+                    lineHeight: 1.65,
+                  }}>
+                    {idea.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* ── FOOTER ── */}
-      <hr className="divider" />
-      <div className="container" style={{ paddingTop: "20px", paddingBottom: "20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontSize: "0.625rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#2a2a2a" }}>
-          Jack Brady · 2025
-        </p>
-        <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontSize: "0.625rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#2a2a2a" }}>
-          ≡+ Enhanced Games · Las Vegas · May 2026
-        </p>
-      </div>
+      <footer style={{
+        background: "var(--black)",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        padding: "20px 0",
+      }}>
+        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <p style={{
+            fontFamily: "var(--font-condensed), sans-serif",
+            fontWeight: 700,
+            fontSize: "0.5625rem",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "rgba(255,255,255,0.18)",
+          }}>
+            Jack Brady · 2025
+          </p>
+          <p style={{
+            fontFamily: "var(--font-condensed), sans-serif",
+            fontWeight: 700,
+            fontSize: "0.5625rem",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "rgba(255,255,255,0.18)",
+          }}>
+            ≡+ Enhanced Games · Las Vegas · May 2026
+          </p>
+        </div>
+      </footer>
 
     </main>
   );
 }
 
-/* The ≡+ Enhanced logo mark — rendered to match their nav exactly */
-function EnhancedMark() {
+function EnhancedMark({ color = "#1A04FF" }: { color?: string }) {
   return (
     <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect y="0" width="10" height="2" fill="#3B4BFF"/>
-      <rect y="6" width="10" height="2" fill="#3B4BFF"/>
-      <rect y="12" width="10" height="2" fill="#3B4BFF"/>
-      <rect x="13" y="4" width="2" height="6" fill="#3B4BFF"/>
-      <rect x="10" y="7" width="8" height="2" fill="#3B4BFF"/>
+      <rect y="0" width="10" height="2" fill={color} />
+      <rect y="6" width="10" height="2" fill={color} />
+      <rect y="12" width="10" height="2" fill={color} />
+      <rect x="13" y="4" width="2" height="6" fill={color} />
+      <rect x="10" y="7" width="8" height="2" fill={color} />
     </svg>
   );
 }
