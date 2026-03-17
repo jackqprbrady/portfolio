@@ -17,8 +17,8 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Jack Brady — Enhanced Profile",
-  description: "Turning skepticism into curiosity — and curiosity into action.",
+  title: "Jack Brady: Enhanced Profile",
+  description: "Turning skepticism into curiosity, and curiosity into action.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -69,10 +69,10 @@ export default function DirectionItem({ label, title }: Props) {
           paddingBottom: "18px",
           paddingRight: "32px",
         }}>
-          {title === "Flip the exclusion" && "Open where people already are — \"this isn't for you\", \"this looks like cheating\" — then flip it. Collapse the assumption before they've had a chance to dig in."}
-          {title === "You vs You" && "Not elite vs amateur. Same person, same life — just functioning better. The comparison that hits hardest is the one people can actually see themselves in."}
+          {title === "Flip the exclusion" && "Open where people already are: \"this isn't for you\", \"this looks like cheating\". Then flip it. Collapse the assumption before they've had a chance to dig in."}
+          {title === "You vs You" && "Not elite vs amateur. Same person, same life. Just functioning better. The comparison that hits hardest is the one people can actually see themselves in."}
           {title === "Everyday friction" && "Energy, recovery, consistency. Not transformation. Removing what's slowing people down and showing the gap between how they feel now and how they could feel."}
-          {title === "Looks like cheating" && "Lean into the discomfort before breaking it. The \"cheating\" frame is already in the room — own it, then dissolve it with what it actually is."}
+          {title === "Looks like cheating" && "Lean into the discomfort before breaking it. The \"cheating\" frame is already in the room. Own it, then dissolve it with what it actually is."}
           {title === "Humour as contrast" && "Show the gap between current state and potential state with a light touch. The distance between how people are functioning now and how they could be is the joke and the sell."}
         </p>
       )}

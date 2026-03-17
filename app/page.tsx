@@ -12,7 +12,7 @@ const narrativeCards = [
   },
   {
     embed: "https://player.vimeo.com/video/332046704",
-    title: "Rhodri Giggs — Loyalty's Dead",
+    title: "Rhodri Giggs: Loyalty's Dead",
     summary: "A story-led ad that never directly sells the product.",
     context: "Rhodri Giggs fronts a campaign about rewards vs loyalty without mentioning betting.",
     lens: "Let personality and narrative carry the message.",
@@ -39,7 +39,7 @@ const conversionCards = [
   },
   {
     embed: "https://player.vimeo.com/video/674099053",
-    title: "Paddy Power Games — Mum",
+    title: "Paddy Power Games: Mum",
     summary: "Product features explained through a relatable moment.",
     context: "A scenario-driven ad showing how game features give players another chance.",
     lens: "Show benefits through situations people understand.",
@@ -140,7 +140,7 @@ export default function Home() {
               lineHeight: 1.05,
               color: "rgba(255,255,255,0.75)",
             }}>
-              Turning Skepticism Into Curiosity — And Curiosity Into Action.
+              Turning Skepticism Into Curiosity. And Curiosity Into Action.
             </p>
 
             {/* Stats + body */}
@@ -179,7 +179,7 @@ export default function Home() {
                 ))}
               </div>
               <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "rgba(255,255,255,0.55)" }}>
-                Years in a category few people trust — making work
+                Years in a category few people trust, making work
                 that earns attention rather than demanding it.
               </p>
             </div>
@@ -285,7 +285,7 @@ export default function Home() {
             {/* Body copy */}
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                Most people come to this with a strong reaction already. It feels extreme, not meant for them, maybe even a bit uncomfortable. So rather than trying to explain it away, the starting point is to lean into that. Open where people already are — &ldquo;this isn&apos;t for you&rdquo;, &ldquo;this looks like cheating&rdquo; — and then flip it. Collapse the assumption by showing what it actually looks like in real life. Not peak performance or lab environments, but everyday routines, better sleep, more consistent energy, and small things working properly. Same person, same life, just functioning better.
+                Most people come to this with a strong reaction already. It feels extreme, not meant for them, maybe even a bit uncomfortable. So rather than trying to explain it away, the starting point is to lean into that. Open where people already are: &ldquo;this isn&apos;t for you&rdquo;, &ldquo;this looks like cheating&rdquo;. Then flip it. Collapse the assumption by showing what it actually looks like in real life. Not peak performance or lab environments, but everyday routines, better sleep, more consistent energy, and small things working properly. Same person, same life, just functioning better.
               </p>
               <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
                 The interesting shift is when it stops feeling distant and starts feeling familiar. Instead of presenting it as something new or extreme, position it as an upgrade to things people already care about. Energy, recovery, consistency. That&apos;s where it becomes relatable. It&apos;s not about transformation or elite performance, it&apos;s about removing friction. Fixing what&apos;s slowing people down, showing the gap between how they feel now and how they could feel. Once that clicks, it stops feeling like something &ldquo;other&rdquo; and starts to feel like something they&apos;d actually use.
