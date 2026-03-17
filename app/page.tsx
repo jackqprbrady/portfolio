@@ -328,7 +328,7 @@ export default function Home() {
         </div>
         <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 56px" }}>
           <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontWeight: 700, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(0,0,0,0.3)" }}>
-            Jack Brady · 2025
+            Jack Brady · 2026
           </p>
           <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontWeight: 700, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(0,0,0,0.3)" }}>
             ≡+ Enhanced Games · Las Vegas · May 2026
