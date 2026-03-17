@@ -20,15 +20,11 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
     <div style={{
       background: "var(--card-bg)",
       border: "1px solid var(--border)",
-      borderRadius: "12px",
+      borderRadius: "10px",
       overflow: "hidden",
-      height: "100%",
       display: "flex",
       flexDirection: "column",
     }}>
-      {/* Green accent line */}
-      <div style={{ height: "2px", background: "var(--accent)", opacity: 0.6 }} />
-
       {/* Video */}
       <div className="video-wrapper">
         <iframe
@@ -40,22 +36,21 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
       </div>
 
       {/* Content */}
-      <div style={{ padding: "1.25rem 1.25rem 1rem", flex: 1, display: "flex", flexDirection: "column" }}>
+      <div style={{ padding: "1rem", flex: 1, display: "flex", flexDirection: "column" }}>
         <h3 style={{
-          fontSize: "1rem",
+          fontSize: "0.9375rem",
           fontWeight: 600,
           color: "var(--fg)",
           letterSpacing: "-0.01em",
-          marginBottom: "0.4rem",
+          marginBottom: "4px",
           lineHeight: 1.3,
         }}>
           {title}
         </h3>
         <p style={{
           fontSize: "0.8125rem",
-          color: "var(--muted)",
-          lineHeight: 1.6,
-          flex: 1,
+          color: "#555",
+          lineHeight: 1.55,
         }}>
           {summary}
         </p>
@@ -67,39 +62,37 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
             display: "flex",
             alignItems: "center",
             gap: "0.3rem",
-            marginTop: "0.875rem",
-            paddingTop: "0.875rem",
+            marginTop: "10px",
+            paddingTop: "10px",
             borderTop: "1px solid var(--border)",
             background: "none",
             cursor: "pointer",
-            color: open ? "var(--fg)" : "var(--muted)",
-            fontSize: "0.75rem",
-            letterSpacing: "0.06em",
+            color: "#444",
+            fontSize: "0.6875rem",
+            letterSpacing: "0.1em",
             textTransform: "uppercase",
             fontFamily: "var(--font-inter)",
-            padding: "0.875rem 0 0",
+            padding: "10px 0 0",
             width: "100%",
             textAlign: "left",
             transition: "color 0.15s",
           }}
+          onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
+          onMouseLeave={e => (e.currentTarget.style.color = "#444")}
         >
-          <span style={{ flex: 1 }}>{open ? "Close" : "Unpack this"}</span>
-          <ChevronDown
-            size={13}
-            style={{
-              transform: open ? "rotate(180deg)" : "rotate(0deg)",
-              transition: "transform 0.2s ease",
-              flexShrink: 0,
-            }}
-          />
+          <span style={{ flex: 1 }}>Unpack this</span>
+          <ChevronDown size={12} style={{
+            transform: open ? "rotate(180deg)" : "rotate(0deg)",
+            transition: "transform 0.2s ease",
+          }} />
         </button>
 
         {open && (
           <div style={{
-            marginTop: "1rem",
+            marginTop: "12px",
             display: "flex",
             flexDirection: "column",
-            gap: "0.875rem",
+            gap: "10px",
           }}>
             <Field label="Context" value={context} />
             <Field label="My Lens" value={lens} />
@@ -116,16 +109,16 @@ function Field({ label, value, accent }: { label: string; value: string; accent?
   return (
     <div>
       <p style={{
-        fontSize: "0.625rem",
+        fontSize: "0.5625rem",
         fontWeight: 700,
         textTransform: "uppercase",
         letterSpacing: "0.1em",
-        color: accent ? "var(--accent)" : "#444",
-        marginBottom: "0.25rem",
+        color: accent ? "var(--accent)" : "#3a3a3a",
+        marginBottom: "2px",
       }}>
         {label}
       </p>
-      <p style={{ fontSize: "0.8125rem", color: "#aaa", lineHeight: 1.65 }}>{value}</p>
+      <p style={{ fontSize: "0.8125rem", color: "#777", lineHeight: 1.55 }}>{value}</p>
     </div>
   );
 }

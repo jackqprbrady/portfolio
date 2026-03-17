@@ -16,36 +16,26 @@ interface Card {
 
 export default function VideoCarousel({ cards, label, index }: { cards: Card[]; label: string; index: string }) {
   const trackRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (dir: number) => {
-    trackRef.current?.scrollBy({ left: dir * 420, behavior: "smooth" });
-  };
+  const scroll = (dir: number) => trackRef.current?.scrollBy({ left: dir * 440, behavior: "smooth" });
 
   return (
-    <section style={{ padding: "0 0 56px" }}>
-      {/* Section header */}
+    <section style={{ borderTop: "1px solid var(--border)", padding: "0 0 0" }}>
+      {/* Header row */}
       <div style={{
         maxWidth: "1100px",
         margin: "0 auto",
-        padding: "40px 40px 20px",
+        padding: "20px 40px 16px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        borderBottom: "1px solid var(--border)",
-        marginBottom: "24px",
       }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: "1.25rem" }}>
-          <span style={{
-            fontFamily: "var(--font-serif)",
-            fontSize: "0.8125rem",
-            color: "var(--accent)",
-            opacity: 0.8,
-          }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <span style={{ fontSize: "0.625rem", color: "var(--accent)", fontWeight: 700, letterSpacing: "0.1em" }}>
             {index}
           </span>
           <h2 style={{
             fontSize: "0.6875rem",
-            fontWeight: 600,
+            fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: "0.15em",
             color: "#555",
@@ -54,15 +44,14 @@ export default function VideoCarousel({ cards, label, index }: { cards: Card[]; 
           </h2>
         </div>
 
-        {/* Arrow buttons */}
-        <div style={{ display: "flex", gap: "0.5rem" }}>
+        <div style={{ display: "flex", gap: "6px" }}>
           {[{ dir: -1, Icon: ArrowLeft }, { dir: 1, Icon: ArrowRight }].map(({ dir, Icon }) => (
             <button
               key={dir}
               onClick={() => scroll(dir)}
               style={{
-                width: "36px",
-                height: "36px",
+                width: "30px",
+                height: "30px",
                 borderRadius: "50%",
                 border: "1px solid var(--border)",
                 background: "none",
@@ -70,7 +59,7 @@ export default function VideoCarousel({ cards, label, index }: { cards: Card[]; 
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                color: "#555",
+                color: "#444",
                 transition: "all 0.15s",
               }}
               onMouseEnter={e => {
@@ -79,24 +68,23 @@ export default function VideoCarousel({ cards, label, index }: { cards: Card[]; 
               }}
               onMouseLeave={e => {
                 (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border)";
-                (e.currentTarget as HTMLButtonElement).style.color = "#555";
+                (e.currentTarget as HTMLButtonElement).style.color = "#444";
               }}
             >
-              <Icon size={14} />
+              <Icon size={12} />
             </button>
           ))}
         </div>
       </div>
 
-      {/* Carousel track with left padding to align with content */}
-      <div style={{ paddingLeft: "clamp(24px, 5vw, 40px)" }}>
+      {/* Track */}
+      <div style={{ paddingLeft: "clamp(20px, 3.6vw, 40px)", paddingBottom: "32px" }}>
         <div className="carousel-track" ref={trackRef}>
           {cards.map((card) => (
             <div key={card.title} className="carousel-item">
               <VideoCard {...card} />
             </div>
           ))}
-          {/* Spacer at end */}
           <div style={{ flex: "0 0 40px" }} />
         </div>
       </div>

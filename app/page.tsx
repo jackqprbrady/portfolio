@@ -95,77 +95,49 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section style={{
-        position: "relative",
         maxWidth: "1100px",
         margin: "0 auto",
-        padding: "clamp(56px, 10vw, 100px) 40px clamp(48px, 8vw, 80px)",
+        padding: "64px 40px 48px",
+        borderBottom: "1px solid var(--border)",
       }}>
-        {/* Name tag */}
         <p style={{
           fontSize: "0.6875rem",
           fontWeight: 600,
-          letterSpacing: "0.2em",
+          letterSpacing: "0.18em",
           textTransform: "uppercase",
           color: "#444",
-          marginBottom: "2.5rem",
+          marginBottom: "28px",
         }}>
           Jack Brady · Creative Strategy & Film
         </p>
 
-        {/* Main headline */}
         <h1 style={{
           fontFamily: "var(--font-serif)",
-          fontSize: "clamp(2.75rem, 7vw, 5.5rem)",
+          fontSize: "clamp(2.25rem, 4vw, 3.5rem)",
           fontWeight: 400,
-          lineHeight: 1.05,
+          lineHeight: 1.1,
           letterSpacing: "-0.02em",
           color: "var(--fg)",
-          maxWidth: "820px",
-          marginBottom: "2.5rem",
+          maxWidth: "680px",
+          marginBottom: "24px",
         }}>
-          Turning Skepticism<br />
-          Into Curiosity —<br />
-          and Curiosity<br />
-          Into Action.
+          Turning Skepticism Into Curiosity — and Curiosity Into Action.
         </h1>
 
-        {/* Divider */}
-        <div style={{ width: "48px", height: "1px", background: "var(--accent)", marginBottom: "2rem", opacity: 0.7 }} />
-
-        {/* Subtext */}
-        <p style={{
-          fontSize: "1rem",
-          lineHeight: 1.8,
-          color: "#777",
-          maxWidth: "480px",
-        }}>
-          I've worked in one of the least trusted categories in sport and entertainment.
-          My job has been to make people stop, watch, laugh, reconsider — and then act.
-          This is a selection of work that shows how that approach translates.
-        </p>
-      </section>
-
-      {/* ── DIVIDER + INTRO ── */}
-      <div style={{ borderTop: "1px solid var(--border)" }}>
-        <div style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "40px 40px 0",
-        }}>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: "32px", flexWrap: "wrap" }}>
+          <div style={{ width: "32px", height: "1px", background: "var(--accent)", marginTop: "12px", flexShrink: 0, opacity: 0.8 }} />
           <p style={{
-            fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.125rem, 2.2vw, 1.5rem)",
-            lineHeight: 1.65,
+            fontSize: "0.9375rem",
+            lineHeight: 1.75,
             color: "#666",
-            maxWidth: "580px",
-            fontStyle: "italic",
+            maxWidth: "480px",
+            flex: 1,
           }}>
-            I've spent years working in a category few people trust. By telling stories,
-            embracing humour and repurposing footage, I've helped turn scepticism into
-            curiosity — and curiosity into action.
+            I've worked in one of the least trusted categories in sport and entertainment.
+            My job has been to make people stop, watch, laugh, reconsider — and then act.
           </p>
         </div>
-      </div>
+      </section>
 
       {/* ── NARRATIVE CAROUSEL ── */}
       <VideoCarousel cards={narrativeCards} label="Narrative / Cultural" index="01" />
@@ -174,48 +146,45 @@ export default function Home() {
       <VideoCarousel cards={conversionCards} label="Paid / CTA / Conversion" index="02" />
 
       {/* ── HOW I THINK ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "56px 0" }}>
+      <section style={{ borderTop: "1px solid var(--border)", padding: "48px 0 48px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
           <p style={{
             fontSize: "0.6875rem",
-            fontWeight: 600,
+            fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: "0.15em",
             color: "#444",
-            marginBottom: "48px",
+            marginBottom: "32px",
           }}>
             03 · How I Think
           </p>
-
           <div>
             {thinkingPoints.map(({ n, text }, i) => (
-              <div
-                key={n}
-                style={{
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: "2rem",
-                  padding: "1.25rem 0",
-                  borderBottom: i < thinkingPoints.length - 1 ? "1px solid var(--border)" : "none",
-                }}
-              >
+              <div key={n} style={{
+                display: "flex",
+                alignItems: "baseline",
+                gap: "1.5rem",
+                padding: "0.875rem 0",
+                borderBottom: i < thinkingPoints.length - 1 ? "1px solid var(--border)" : "none",
+              }}>
                 <span style={{
-                  fontSize: "0.6875rem",
+                  fontSize: "0.625rem",
                   color: "var(--accent)",
-                  fontWeight: 600,
-                  letterSpacing: "0.05em",
+                  fontWeight: 700,
+                  letterSpacing: "0.08em",
                   flexShrink: 0,
                   opacity: 0.7,
+                  minWidth: "20px",
                 }}>
                   {n}
                 </span>
                 <p style={{
                   fontFamily: "var(--font-serif)",
-                  fontSize: "clamp(1.5rem, 3.5vw, 2.75rem)",
+                  fontSize: "clamp(1.25rem, 2.5vw, 2rem)",
                   color: "var(--fg)",
                   fontWeight: 400,
-                  lineHeight: 1.1,
-                  letterSpacing: "-0.02em",
+                  lineHeight: 1.15,
+                  letterSpacing: "-0.015em",
                 }}>
                   {text}
                 </p>
@@ -226,42 +195,38 @@ export default function Home() {
       </section>
 
       {/* ── WHY THIS MATTERS ── */}
-      <section style={{ padding: "0 0 56px", borderTop: "1px solid var(--border)" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "56px 40px 0" }}>
+      <section style={{ borderTop: "1px solid var(--border)", padding: "48px 0" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
           <div style={{
-            background: "#0d1a0d",
-            border: "1px solid #1a2e1a",
-            borderRadius: "16px",
-            padding: "clamp(40px, 6vw, 72px)",
+            background: "#0c1a0c",
+            border: "1px solid #1c301c",
+            borderRadius: "12px",
+            padding: "clamp(32px, 4vw, 56px)",
           }}>
             <p style={{
-              fontSize: "0.6875rem",
-              fontWeight: 600,
+              fontSize: "0.625rem",
+              fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "0.15em",
               color: "var(--accent)",
-              opacity: 0.8,
-              marginBottom: "2rem",
+              marginBottom: "20px",
             }}>
               Why This Matters for Enhanced
             </p>
-
             <h2 style={{
               fontFamily: "var(--font-serif)",
-              fontSize: "clamp(1.75rem, 4vw, 3.25rem)",
+              fontSize: "clamp(1.5rem, 3vw, 2.5rem)",
               fontWeight: 400,
-              lineHeight: 1.15,
+              lineHeight: 1.2,
               letterSpacing: "-0.02em",
               color: "var(--fg)",
-              marginBottom: "2rem",
-              maxWidth: "680px",
+              marginBottom: "20px",
+              maxWidth: "620px",
             }}>
               Enhanced doesn't have an awareness problem — it has a framing problem.
             </h2>
-
-            <div style={{ width: "40px", height: "1px", background: "var(--accent)", marginBottom: "2rem", opacity: 0.5 }} />
-
-            <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#888", maxWidth: "540px" }}>
+            <div style={{ width: "32px", height: "1px", background: "var(--accent)", marginBottom: "20px", opacity: 0.5 }} />
+            <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#777", maxWidth: "520px" }}>
               Most people will encounter it with skepticism. The opportunity is to shift how it's
               understood before trying to explain it. That means making the category feel human,
               watchable and culturally relevant — not technical or defensive.
@@ -271,66 +236,59 @@ export default function Home() {
       </section>
 
       {/* ── DIRECTIONS ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "56px 0 100px" }}>
+      <section style={{ borderTop: "1px solid var(--border)", padding: "48px 0 80px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
           <p style={{
             fontSize: "0.6875rem",
-            fontWeight: 600,
+            fontWeight: 700,
             textTransform: "uppercase",
             letterSpacing: "0.15em",
             color: "#444",
-            marginBottom: "48px",
+            marginBottom: "32px",
           }}>
             04 · A Few Directions I'd Explore
           </p>
-
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: "1.25rem",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "1rem",
           }}>
             {directions.map((d, i) => (
-              <div
-                key={d.title}
-                style={{
-                  background: "var(--card-bg)",
-                  border: "1px solid var(--border)",
-                  borderRadius: "12px",
-                  padding: "2rem",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-              >
-                {/* Number watermark */}
+              <div key={d.title} style={{
+                background: "var(--card-bg)",
+                border: "1px solid var(--border)",
+                borderRadius: "10px",
+                padding: "1.5rem",
+                position: "relative",
+                overflow: "hidden",
+              }}>
                 <span style={{
                   position: "absolute",
-                  top: "1.25rem",
-                  right: "1.5rem",
+                  top: "1rem",
+                  right: "1.25rem",
                   fontFamily: "var(--font-serif)",
-                  fontSize: "3rem",
+                  fontSize: "2.5rem",
                   color: "#1a1a1a",
                   lineHeight: 1,
                   userSelect: "none",
                 }}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
-
                 <h3 style={{
                   fontFamily: "var(--font-serif)",
-                  fontSize: "1.25rem",
+                  fontSize: "1.125rem",
                   fontWeight: 400,
                   color: "var(--fg)",
-                  marginBottom: "1.5rem",
+                  marginBottom: "1.25rem",
                   lineHeight: 1.3,
-                  maxWidth: "200px",
+                  maxWidth: "180px",
                 }}>
                   {d.title}
                 </h3>
-
-                <dl style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
-                  <DirectionField label="Hook" value={d.hook} />
-                  <DirectionField label="Execution" value={d.execution} />
-                  <DirectionField label="Why it works" value={d.why} accent />
+                <dl style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                  <DField label="Hook" value={d.hook} />
+                  <DField label="Execution" value={d.execution} />
+                  <DField label="Why it works" value={d.why} accent />
                 </dl>
               </div>
             ))}
@@ -339,25 +297,26 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer style={{
+      <div style={{
         borderTop: "1px solid var(--border)",
-        padding: "32px 40px",
         maxWidth: "1100px",
         margin: "0 auto",
+        padding: "24px 40px",
       }}>
-        <p style={{ fontSize: "0.75rem", color: "#333", letterSpacing: "0.05em" }}>
+        <p style={{ fontSize: "0.6875rem", color: "#333", letterSpacing: "0.05em" }}>
           Jack Brady · 2025
         </p>
-      </footer>
+      </div>
+
     </main>
   );
 }
 
-function DirectionField({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
+function DField({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
   return (
     <div>
       <dt style={{
-        fontSize: "0.625rem",
+        fontSize: "0.5625rem",
         fontWeight: 700,
         textTransform: "uppercase",
         letterSpacing: "0.1em",
@@ -366,7 +325,7 @@ function DirectionField({ label, value, accent }: { label: string; value: string
       }}>
         {label}
       </dt>
-      <dd style={{ fontSize: "0.875rem", color: "#888", lineHeight: 1.55 }}>{value}</dd>
+      <dd style={{ fontSize: "0.8125rem", color: "#777", lineHeight: 1.5 }}>{value}</dd>
     </div>
   );
 }
