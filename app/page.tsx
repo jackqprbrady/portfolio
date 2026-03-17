@@ -77,9 +77,9 @@ export default function Home() {
         <div className="nav-links">
           <a href="#narrative" className="nav-link">Work</a>
           <a href="#enhanced" className="nav-link">Ideas</a>
-          <a href="mailto:jackqprbrady@gmail.com" className="nav-link">Contact</a>
+          <a href="mailto:jack@jackbradyfilm.co.uk" className="nav-link">Contact</a>
         </div>
-        <a href="mailto:jackqprbrady@gmail.com" className="nav-cta">
+        <a href="mailto:jack@jackbradyfilm.co.uk" className="nav-cta">
           Get in touch
         </a>
       </nav>
