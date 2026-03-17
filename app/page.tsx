@@ -98,7 +98,7 @@ export default function Home() {
         position: "relative",
         maxWidth: "1100px",
         margin: "0 auto",
-        padding: "clamp(64px, 12vw, 140px) 40px clamp(64px, 10vw, 120px)",
+        padding: "clamp(56px, 10vw, 100px) 40px clamp(48px, 8vw, 80px)",
       }}>
         {/* Name tag */}
         <p style={{
@@ -150,19 +150,19 @@ export default function Home() {
         <div style={{
           maxWidth: "1100px",
           margin: "0 auto",
-          padding: "64px 40px 80px",
+          padding: "40px 40px 0",
         }}>
           <p style={{
             fontFamily: "var(--font-serif)",
-            fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)",
-            lineHeight: 1.6,
-            color: "#888",
-            maxWidth: "640px",
+            fontSize: "clamp(1.125rem, 2.2vw, 1.5rem)",
+            lineHeight: 1.65,
+            color: "#666",
+            maxWidth: "580px",
             fontStyle: "italic",
           }}>
-            "I've spent years working in a category few people trust. By telling stories,
+            I've spent years working in a category few people trust. By telling stories,
             embracing humour and repurposing footage, I've helped turn scepticism into
-            curiosity — and curiosity into action."
+            curiosity — and curiosity into action.
           </p>
         </div>
       </div>
@@ -174,7 +174,7 @@ export default function Home() {
       <VideoCarousel cards={conversionCards} label="Paid / CTA / Conversion" index="02" />
 
       {/* ── HOW I THINK ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "80px 0" }}>
+      <section style={{ borderTop: "1px solid var(--border)", padding: "56px 0" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
           <p style={{
             fontSize: "0.6875rem",
@@ -226,8 +226,8 @@ export default function Home() {
       </section>
 
       {/* ── WHY THIS MATTERS ── */}
-      <section style={{ padding: "0 0 80px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
+      <section style={{ padding: "0 0 56px", borderTop: "1px solid var(--border)" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "56px 40px 0" }}>
           <div style={{
             background: "#0d1a0d",
             border: "1px solid #1a2e1a",
@@ -271,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* ── DIRECTIONS ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "80px 0 120px" }}>
+      <section style={{ borderTop: "1px solid var(--border)", padding: "56px 0 100px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
           <p style={{
             fontSize: "0.6875rem",

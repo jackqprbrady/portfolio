@@ -22,17 +22,17 @@ export default function VideoCarousel({ cards, label, index }: { cards: Card[]; 
   };
 
   return (
-    <section style={{ padding: "0 0 80px" }}>
+    <section style={{ padding: "0 0 56px" }}>
       {/* Section header */}
       <div style={{
         maxWidth: "1100px",
         margin: "0 auto",
-        padding: "0 40px 28px",
+        padding: "40px 40px 20px",
         display: "flex",
-        alignItems: "flex-end",
+        alignItems: "center",
         justifyContent: "space-between",
         borderBottom: "1px solid var(--border)",
-        marginBottom: "32px",
+        marginBottom: "24px",
       }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: "1.25rem" }}>
           <span style={{
