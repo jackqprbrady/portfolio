@@ -105,7 +105,7 @@ export default function Home() {
             gap: "10px",
           }}>
             <span style={{ display: "block", width: "18px", height: "1px", background: "rgba(255,255,255,0.3)", flexShrink: 0 }} />
-            Enhanced Profile · Creative Strategy &amp; Film
+            Enhanced Profile · Enhanced Marketing Design
           </p>
 
           {/* Name — full width */}
