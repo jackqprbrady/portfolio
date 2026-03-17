@@ -9,68 +9,94 @@ interface Props {
   summary: string;
   context: string;
   lens: string;
+  category: string;
 }
 
-export default function VideoCard({ embed, title, summary, context, lens }: Props) {
+export default function VideoCard({ embed, title, summary, context, lens, category }: Props) {
   const [open, setOpen] = useState(false);
 
   return (
     <div style={{
-      background: "#0f0f0f",
+      background: "#0d0d0d",
       border: "1px solid #1c1c1c",
+      borderTop: "2px solid var(--blue)",
       borderRadius: "8px",
       overflow: "hidden",
     }}>
+      {/* Video with category tag */}
       <div className="video-wrapper">
         <iframe src={embed} title={title} allowFullScreen allow="fullscreen; picture-in-picture" />
+        <span className="video-tag">{category}</span>
       </div>
 
-      <div style={{ padding: "14px 16px 16px" }}>
+      <div style={{ padding: "12px 14px 14px" }}>
         <p style={{ fontSize: "0.875rem", fontWeight: 600, color: "#e0e0e0", lineHeight: 1.3, marginBottom: "4px" }}>
           {title}
         </p>
-        <p style={{ fontSize: "0.8125rem", color: "#555", lineHeight: 1.5 }}>
+        <p style={{ fontSize: "0.8125rem", color: "#4a4a4a", lineHeight: 1.5 }}>
           {summary}
         </p>
 
+        {/* Pill expand button — Enhanced style */}
         <button
           onClick={() => setOpen(v => !v)}
           style={{
-            display: "flex",
+            display: "inline-flex",
             alignItems: "center",
-            justifyContent: "space-between",
-            width: "100%",
+            gap: "6px",
             marginTop: "12px",
-            paddingTop: "12px",
-            borderTop: "1px solid #1c1c1c",
+            padding: "5px 12px",
+            borderRadius: "9999px",
+            border: "1px solid #252525",
             background: "none",
             cursor: "pointer",
-            color: "#444",
-            fontSize: "0.6875rem",
-            letterSpacing: "0.08em",
+            color: "#4a4a4a",
+            fontSize: "0.625rem",
+            letterSpacing: "0.1em",
             textTransform: "uppercase",
-            padding: "12px 0 0",
+            fontFamily: "var(--font-condensed), sans-serif",
+            fontWeight: 700,
+            transition: "border-color 0.15s, color 0.15s",
           }}
-          onMouseEnter={e => (e.currentTarget.style.color = "#888")}
-          onMouseLeave={e => (e.currentTarget.style.color = "#444")}
+          onMouseEnter={e => {
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--blue)";
+            (e.currentTarget as HTMLButtonElement).style.color = "var(--blue)";
+          }}
+          onMouseLeave={e => {
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "#252525";
+            (e.currentTarget as HTMLButtonElement).style.color = "#4a4a4a";
+          }}
         >
-          <span>Behind this</span>
-          <ChevronDown size={11} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
+          Behind this
+          <ChevronDown size={10} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
         </button>
 
         {open && (
-          <div style={{ marginTop: "12px", display: "flex", flexDirection: "column", gap: "10px" }}>
-            <div>
-              <p style={{ fontSize: "0.5625rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#333", marginBottom: "3px" }}>Context</p>
-              <p style={{ fontSize: "0.8125rem", color: "#666", lineHeight: 1.55 }}>{context}</p>
-            </div>
-            <div>
-              <p style={{ fontSize: "0.5625rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#333", marginBottom: "3px" }}>My lens</p>
-              <p style={{ fontSize: "0.8125rem", color: "#666", lineHeight: 1.55 }}>{lens}</p>
-            </div>
+          <div style={{ marginTop: "14px", display: "flex", flexDirection: "column", gap: "12px", borderTop: "1px solid #1a1a1a", paddingTop: "14px" }}>
+            <InfoRow label="Context" value={context} />
+            <InfoRow label="My lens" value={lens} />
           </div>
         )}
       </div>
+    </div>
+  );
+}
+
+function InfoRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <p style={{
+        fontFamily: "var(--font-condensed), sans-serif",
+        fontWeight: 700,
+        fontSize: "0.5625rem",
+        textTransform: "uppercase",
+        letterSpacing: "0.15em",
+        color: "#333",
+        marginBottom: "4px",
+      }}>
+        {label}
+      </p>
+      <p style={{ fontSize: "0.8125rem", color: "#666", lineHeight: 1.55 }}>{value}</p>
     </div>
   );
 }

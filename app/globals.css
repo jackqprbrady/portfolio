@@ -4,6 +4,11 @@
 
 html { scroll-behavior: smooth; }
 
+:root {
+  --blue: #3B4BFF;
+  --blue-dim: rgba(59, 75, 255, 0.15);
+}
+
 body {
   background: #0a0a0a;
   color: #e0e0e0;
@@ -20,7 +25,7 @@ body {
 .video-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 12px;
 }
 
 .video-wrapper {
@@ -38,10 +43,41 @@ body {
   border: 0;
 }
 
-.divider {
-  border: none;
-  border-top: 1px solid #1c1c1c;
-  margin: 0;
+.divider { border: none; border-top: 1px solid #1a1a1a; margin: 0; }
+
+/* Section label — Enhanced-style condensed */
+.section-label {
+  font-family: var(--font-condensed), sans-serif;
+  font-weight: 800;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #3a3a3a;
+}
+
+.section-label .num {
+  color: var(--blue);
+  margin-right: 10px;
+  opacity: 0.9;
+  font-size: 0.6875rem;
+}
+
+/* Video category tag */
+.video-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: var(--font-condensed), sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 3px 8px;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 900px) {
