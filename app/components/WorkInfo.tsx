@@ -62,7 +62,16 @@ export default function WorkInfo() {
             color: "rgba(0,0,0,0.6)",
             maxWidth: "680px",
           }}>
-            Six years at Paddy Power, where I currently work across the full content pipeline. Each video here is something I have been involved in from the earliest briefing sessions through to the finished cut: pushing back on the obvious routes, developing ideas from concept to script to screen. A big part of the role is also taking that content further. Repurposing and cutting it down for our own platforms, including Paddy Power News, so the same creative work can live across social, editorial, and owned channels in a way that actually suits each one.
+            Six years at Paddy Power, where I currently work across the full content pipeline, specifically focused on leading digital video and imagery content on{" "}
+            <a
+              href="https://www.paddypowernews.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#1A04FF", textDecoration: "underline", textUnderlineOffset: "3px" }}
+            >
+              Paddy Power News
+            </a>
+            . Each video here is something I have been involved in from the earliest briefing sessions through to the finished cut: pushing back on the obvious routes, developing ideas from concept to script to screen. A big part of the role is also taking that content further. Repurposing and cutting it down for our own platforms so the same creative work can live across social, editorial, and owned channels in a way that actually suits each one.
           </p>
         </div>
       )}
