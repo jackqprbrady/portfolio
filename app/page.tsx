@@ -287,10 +287,7 @@ export default function Home() {
               <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
                 Most people are going to come into this with a reaction already. It feels extreme, not for them, maybe even a bit uncomfortable. So instead of trying to soften that, I think you lean straight into it. Open where they already are: &ldquo;this isn&apos;t for you&rdquo;, &ldquo;this looks like cheating&rdquo;. Then flip it quickly. Show what it actually looks like before they&apos;ve had time to settle into that assumption. Not elite performance or lab environments, just normal routines, better sleep, more consistent energy, things working properly. Same person, same life, just functioning better.
               </p>
-              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                The shift I&apos;m interested in is when it stops feeling distant and starts feeling familiar. Rather than introducing it as something new or extreme, it feels more like an upgrade to things people already care about: energy, recovery, consistency. Not transformation, not elite performance, just removing friction. Fixing what&apos;s slowing people down, showing the gap between how they feel now and how they could feel. Once that lands, it stops feeling like something &ldquo;other&rdquo; and starts to feel like something they&apos;d actually use.
-              </p>
-              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
+<p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
                 Some directions this could go in: starting with exclusion and flipping it back into relevance, doing &ldquo;you vs you&rdquo; instead of athlete comparisons, focusing on everyday friction and what&apos;s actually holding people back, leaning into the idea that it &ldquo;looks like cheating&rdquo; before breaking that, and using a bit of humour to show the gap between how people are functioning now vs how they could be.
               </p>
             </div>
