@@ -99,14 +99,30 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 56px;
+  padding: 0 20px;
 }
 
 /* ─── VIDEO GRID ─── */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 14px;
+}
+
+/* ─── HERO GRID ─── */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* ─── TWO-COL SECTION ─── */
+.section-two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
 .video-wrapper {
@@ -244,15 +260,18 @@ body {
   padding: 48px 40px 24px;
 }
 
-/* ─── RESPONSIVE ─── */
-@media (max-width: 900px) {
-  .nav { padding: 0 8px 0 16px; width: calc(100% - 32px); }
-  .nav-links { display: none; }
-  .container { padding: 0 20px; }
-  .video-grid { grid-template-columns: 1fr; }
-  .footer-wordmark { font-size: clamp(3rem, 15vw, 6rem); padding: 32px 20px 16px; }
+/* ─── NAV: hide links by default on mobile ─── */
+.nav {
+  padding: 0 6px 0 16px;
+  width: calc(100% - 32px);
 }
 
-@media (min-width: 901px) and (max-width: 1100px) {
-  .video-grid { grid-template-columns: repeat(2, 1fr); }
+.nav-links {
+  display: none;
+}
+
+/* ─── FOOTER ─── */
+.footer-wordmark {
+  font-size: clamp(3rem, 15vw, 6rem);
+  padding: 32px 20px 16px;
 }

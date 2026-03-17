@@ -87,8 +87,8 @@ export default function Home() {
       {/* ── HERO ── */}
       <section style={{
         background: "var(--black)",
-        paddingTop: "100px",
-        paddingBottom: "64px",
+        paddingTop: "80px",
+        paddingBottom: "44px",
         borderBottom: "1px solid rgba(255,255,255,0.08)",
       }}>
         <div className="container">
@@ -123,13 +123,8 @@ export default function Home() {
             Jack Brady
           </h1>
 
-          {/* Two-col: animated tagline left, stats + body right */}
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 360px",
-            gap: "64px",
-            alignItems: "center",
-          }}>
+          {/* Tagline + stats */}
+          <div className="hero-grid">
 
             {/* Animated tagline */}
             <p className="tagline-animate" style={{
@@ -220,7 +215,7 @@ export default function Home() {
       </section>
 
       {/* ── ON ENHANCED ── */}
-      <section id="enhanced" style={{ background: "var(--blue)", paddingTop: "96px", paddingBottom: "80px", position: "relative", overflow: "hidden" }}>
+      <section id="enhanced" style={{ background: "var(--blue)", paddingTop: "56px", paddingBottom: "56px", position: "relative", overflow: "hidden" }}>
 
         {/* Ghost watermark */}
         <div style={{
@@ -280,8 +275,8 @@ export default function Home() {
             How this could be framed for the everyday person
           </p>
 
-          {/* Two-col: body copy left, directions right */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", alignItems: "start" }}>
+          {/* Body copy + directions */}
+          <div className="section-two-col">
 
             {/* Body copy */}
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
