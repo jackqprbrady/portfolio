@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function VideoCard({ embed, title, summary, context, lens, category }: Props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <div className="video-card">
