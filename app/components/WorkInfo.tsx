@@ -64,7 +64,7 @@ export default function WorkInfo() {
           }}>
             Six years at Paddy Power, where I currently work across the full content pipeline, specifically focused on leading digital video and imagery content on{" "}
             <a
-              href="https://www.paddypowernews.com"
+              href="https://news.paddypower.com/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#1A04FF", textDecoration: "underline", textUnderlineOffset: "3px" }}
