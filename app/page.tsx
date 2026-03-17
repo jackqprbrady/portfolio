@@ -79,7 +79,7 @@ export default function Home() {
       {/* ── NAV ── */}
       <nav className="nav">
         <div className="nav-logo">
-          <EnhancedMark color="rgba(255,255,255,0.7)" />
+          <EnhancedMark color="rgba(255,255,255,0.75)" />
           Jack Brady
         </div>
         <div className="nav-links">
@@ -95,9 +95,9 @@ export default function Home() {
       {/* ── HERO ── */}
       <section style={{
         background: "var(--black)",
-        paddingTop: "108px",
-        paddingBottom: "60px",
-        borderBottom: "1px solid rgba(255,255,255,0.07)",
+        paddingTop: "100px",
+        paddingBottom: "64px",
+        borderBottom: "1px solid rgba(255,255,255,0.08)",
       }}>
         <div className="container">
 
@@ -107,58 +107,74 @@ export default function Home() {
             fontSize: "0.5625rem",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.45)",
-            marginBottom: "28px",
+            color: "rgba(255,255,255,0.4)",
+            marginBottom: "24px",
             display: "flex",
             alignItems: "center",
             gap: "10px",
           }}>
             <span style={{ display: "block", width: "18px", height: "1px", background: "rgba(255,255,255,0.3)", flexShrink: 0 }} />
-            Betting &amp; Sports · 10+ Years
+            Enhanced Profile · Creative Strategy &amp; Film
           </p>
 
+          {/* Name — full width */}
+          <h1 style={{
+            fontFamily: "var(--font-condensed), sans-serif",
+            fontWeight: 800,
+            fontSize: "clamp(4.5rem, 10vw, 10rem)",
+            textTransform: "uppercase",
+            letterSpacing: "-0.04em",
+            lineHeight: 0.88,
+            color: "#fff",
+            marginBottom: "40px",
+          }}>
+            Jack Brady
+          </h1>
+
+          {/* Two-col: animated tagline left, stats + body right */}
           <div style={{
             display: "grid",
             gridTemplateColumns: "1fr 360px",
             gap: "64px",
             alignItems: "center",
           }}>
-            <h1 style={{
+
+            {/* Animated tagline */}
+            <p className="tagline-animate" style={{
               fontFamily: "var(--font-condensed), sans-serif",
               fontWeight: 800,
-              fontSize: "clamp(3.5rem, 7vw, 6.5rem)",
+              fontSize: "clamp(1.25rem, 2.2vw, 2rem)",
               textTransform: "uppercase",
-              letterSpacing: "-0.03em",
-              lineHeight: 0.92,
-              color: "#fff",
+              letterSpacing: "-0.02em",
+              lineHeight: 1.05,
+              color: "rgba(255,255,255,0.75)",
             }}>
               Turning Skepticism Into Curiosity — And Curiosity Into Action.
-            </h1>
+            </p>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-              {/* Stats */}
+            {/* Stats + body */}
+            <div>
               <div style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(3, 1fr)",
-                gap: "0",
-                paddingBottom: "28px",
+                paddingBottom: "24px",
                 borderBottom: "1px solid rgba(255,255,255,0.08)",
-                marginBottom: "28px",
+                marginBottom: "24px",
               }}>
                 {[
-                  { num: "10+", label: "Years in category" },
-                  { num: "6", label: "Campaigns featured" },
-                  { num: "£m", label: "Media managed" },
+                  { num: "10+", label: "Years" },
+                  { num: "6", label: "Campaigns" },
+                  { num: "£m", label: "Media" },
                 ].map(s => (
                   <div key={s.num}>
                     <p style={{
                       fontFamily: "var(--font-condensed), sans-serif",
                       fontWeight: 800,
-                      fontSize: "2.5rem",
+                      fontSize: "2.25rem",
                       letterSpacing: "-0.04em",
                       color: "#fff",
                       lineHeight: 1,
-                      marginBottom: "6px",
+                      marginBottom: "5px",
                     }}>{s.num}</p>
                     <p style={{
                       fontFamily: "var(--font-condensed), sans-serif",
@@ -171,45 +187,40 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              {/* Body */}
-              <p style={{
-                fontSize: "0.9375rem",
-                lineHeight: 1.75,
-                color: "rgba(255,255,255,0.6)",
-              }}>
-                I&apos;ve spent years in a category few people trust — making work
+              <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "rgba(255,255,255,0.55)" }}>
+                Years in a category few people trust — making work
                 that earns attention rather than demanding it.
               </p>
             </div>
-          </div>
 
+          </div>
         </div>
       </section>
 
-      {/* ── NARRATIVE / CULTURAL ── */}
+      {/* ── NARRATIVE / CULTURAL — white bg ── */}
       <section id="narrative" style={{
-        background: "var(--black)",
-        paddingTop: "40px",
-        paddingBottom: "52px",
-        borderBottom: "1px solid rgba(255,255,255,0.07)",
+        background: "#FAF9F5",
+        paddingTop: "44px",
+        paddingBottom: "56px",
+        borderBottom: "1px solid rgba(0,0,0,0.07)",
       }}>
         <div className="container">
-          <p className="section-label">Narrative / Cultural</p>
+          <p className="section-label-light">Narrative / Cultural</p>
           <div className="video-grid">
             {narrativeCards.map(c => <VideoCard key={c.title} {...c} />)}
           </div>
         </div>
       </section>
 
-      {/* ── PAID / CTA / CONVERSION ── */}
+      {/* ── PAID / CTA / CONVERSION — white bg ── */}
       <section id="conversion" style={{
-        background: "#080808",
-        paddingTop: "40px",
-        paddingBottom: "52px",
-        borderBottom: "1px solid rgba(255,255,255,0.07)",
+        background: "#ffffff",
+        paddingTop: "44px",
+        paddingBottom: "56px",
+        borderBottom: "1px solid rgba(0,0,0,0.07)",
       }}>
         <div className="container">
-          <p className="section-label">Paid / CTA / Conversion</p>
+          <p className="section-label-light">Paid / CTA / Conversion</p>
           <div className="video-grid">
             {conversionCards.map(c => <VideoCard key={c.title} {...c} />)}
           </div>
@@ -219,14 +230,14 @@ export default function Home() {
       {/* ── ON ENHANCED ── */}
       <section id="enhanced" style={{ background: "var(--blue)", paddingTop: "96px", paddingBottom: "80px", position: "relative", overflow: "hidden" }}>
 
-        {/* Background watermark */}
+        {/* Ghost watermark */}
         <div style={{
           position: "absolute",
-          bottom: "-60px",
+          bottom: "-80px",
           right: "-40px",
           fontFamily: "var(--font-condensed), sans-serif",
           fontWeight: 800,
-          fontSize: "clamp(8rem, 20vw, 22rem)",
+          fontSize: "clamp(8rem, 22vw, 24rem)",
           textTransform: "uppercase",
           letterSpacing: "-0.04em",
           lineHeight: 1,
@@ -238,7 +249,6 @@ export default function Home() {
         </div>
 
         <div className="container" style={{ position: "relative" }}>
-
           <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "48px" }}>
             <EnhancedMark color="rgba(255,255,255,0.5)" size={26} />
             <span style={{
@@ -248,18 +258,10 @@ export default function Home() {
               letterSpacing: "0.25em",
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.5)",
-            }}>
-              Enhanced
-            </span>
+            }}>Enhanced</span>
           </div>
 
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "72px",
-            alignItems: "start",
-          }}>
-
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", alignItems: "start" }}>
             <div>
               <h2 style={{
                 fontFamily: "var(--font-condensed), sans-serif",
@@ -311,43 +313,31 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </section>
 
       {/* ── FOOTER ── */}
-      <footer style={{ background: "var(--black)" }}>
-        {/* Giant wordmark */}
-        <div style={{ borderBottom: "1px solid rgba(255,255,255,0.07)", overflow: "hidden" }}>
-          <span className="footer-wordmark">Jack Brady</span>
-        </div>
-
-        {/* Copyright bar */}
-        <div className="container" style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "16px 56px",
-        }}>
-          <p style={{
+      <footer style={{ background: "#FAF9F5" }}>
+        <div style={{ borderBottom: "1px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
+          <span style={{
             fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 700,
-            fontSize: "0.5rem",
-            letterSpacing: "0.18em",
+            fontWeight: 800,
+            fontSize: "clamp(5rem, 17vw, 18rem)",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.18)",
-          }}>
+            letterSpacing: "-0.04em",
+            lineHeight: 0.85,
+            color: "#000",
+            display: "block",
+            padding: "48px 40px 16px",
+            overflow: "hidden",
+          }}>Jack Brady</span>
+        </div>
+        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 56px" }}>
+          <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontWeight: 700, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(0,0,0,0.3)" }}>
             Jack Brady · 2025
           </p>
-          <p style={{
-            fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 700,
-            fontSize: "0.5rem",
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.18)",
-          }}>
+          <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontWeight: 700, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(0,0,0,0.3)" }}>
             ≡+ Enhanced Games · Las Vegas · May 2026
           </p>
         </div>

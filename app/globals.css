@@ -180,6 +180,55 @@ body {
   backdrop-filter: blur(4px);
 }
 
+/* ─── TAGLINE ANIMATION ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  0%   { opacity: 1; transform: translateY(0); }
+  80%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-8px); }
+}
+
+@keyframes taglineCycle {
+  0%   { opacity: 0; transform: translateY(12px); }
+  8%   { opacity: 1; transform: translateY(0); }
+  72%  { opacity: 1; transform: translateY(0); }
+  82%  { opacity: 0; transform: translateY(-8px); }
+  90%  { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 0; transform: translateY(12px); }
+}
+
+.tagline-animate {
+  animation: taglineCycle 5s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* ─── SECTION LABEL (light bg variant) ─── */
+.section-label-light {
+  font-family: var(--font-condensed), sans-serif;
+  font-weight: 700;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.section-label-light::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
 /* ─── FOOTER WORDMARK ─── */
 .footer-wordmark {
   font-family: var(--font-condensed), sans-serif;
