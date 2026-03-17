@@ -1,4 +1,5 @@
 import VideoCard from "./components/VideoCard";
+import DirectionItem from "./components/DirectionItem";
 
 const narrativeCards = [
   {
@@ -54,22 +55,12 @@ const conversionCards = [
   },
 ];
 
-const ideas = [
-  {
-    label: "Idea 01",
-    title: "What People Think vs Reality",
-    body: "Fast contrast cuts. \"This is cheating\" vs \"This is regulated science\". Reframes the category in seconds.",
-  },
-  {
-    label: "Idea 02",
-    title: "Engineered Athlete",
-    body: "Treat the athlete like a system. Data, performance visuals, premium science. Makes the product feel inevitable.",
-  },
-  {
-    label: "Idea 03",
-    title: "Road to May",
-    body: "Follow athletes preparing. Short-form, serialised. Builds the kind of investment that makes the product feel personal.",
-  },
+const directions = [
+  { label: "01", title: "Flip the exclusion" },
+  { label: "02", title: "You vs You" },
+  { label: "03", title: "Everyday friction" },
+  { label: "04", title: "Looks like cheating" },
+  { label: "05", title: "Humour as contrast" },
 ];
 
 export default function Home() {
@@ -249,7 +240,9 @@ export default function Home() {
         </div>
 
         <div className="container" style={{ position: "relative" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "48px" }}>
+
+          {/* Label row */}
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "40px" }}>
             <EnhancedMark color="rgba(255,255,255,0.5)" size={26} />
             <span style={{
               fontFamily: "var(--font-condensed), sans-serif",
@@ -261,58 +254,65 @@ export default function Home() {
             }}>Enhanced</span>
           </div>
 
+          {/* Section title */}
+          <h2 style={{
+            fontFamily: "var(--font-condensed), sans-serif",
+            fontWeight: 800,
+            fontSize: "clamp(2.75rem, 5vw, 5rem)",
+            textTransform: "uppercase",
+            letterSpacing: "-0.04em",
+            lineHeight: 0.9,
+            color: "#fff",
+            marginBottom: "16px",
+          }}>
+            Early Thoughts
+          </h2>
+          <p style={{
+            fontFamily: "var(--font-condensed), sans-serif",
+            fontWeight: 700,
+            fontSize: "0.875rem",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            color: "rgba(255,255,255,0.5)",
+            marginBottom: "56px",
+          }}>
+            How this could be framed for the everyday person
+          </p>
+
+          {/* Two-col: body copy left, directions right */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", alignItems: "start" }}>
-            <div>
-              <h2 style={{
-                fontFamily: "var(--font-condensed), sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(2.5rem, 3.8vw, 3.75rem)",
-                textTransform: "uppercase",
-                letterSpacing: "-0.03em",
-                lineHeight: 0.92,
-                color: "#fff",
-                marginBottom: "28px",
-              }}>
-                The Category Has A Framing Problem, Not An Awareness One.
-              </h2>
-              <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "rgba(255,255,255,0.7)" }}>
-                Most people arrive skeptical. The interesting work shifts that before
-                anyone&apos;s tried to explain the product. A few directions I&apos;d look at:
+
+            {/* Body copy */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
+                Most people come to this with a strong reaction already. It feels extreme, not meant for them, maybe even a bit uncomfortable. So rather than trying to explain it away, the starting point is to lean into that. Open where people already are — &ldquo;this isn&apos;t for you&rdquo;, &ldquo;this looks like cheating&rdquo; — and then flip it. Collapse the assumption by showing what it actually looks like in real life. Not peak performance or lab environments, but everyday routines, better sleep, more consistent energy, and small things working properly. Same person, same life, just functioning better.
+              </p>
+              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
+                The interesting shift is when it stops feeling distant and starts feeling familiar. Instead of presenting it as something new or extreme, position it as an upgrade to things people already care about. Energy, recovery, consistency. That&apos;s where it becomes relatable. It&apos;s not about transformation or elite performance, it&apos;s about removing friction. Fixing what&apos;s slowing people down, showing the gap between how they feel now and how they could feel. Once that clicks, it stops feeling like something &ldquo;other&rdquo; and starts to feel like something they&apos;d actually use.
+              </p>
+              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
+                Some directions this could take: starting with exclusion and flipping it back into relevance, contrasting &ldquo;you vs you&rdquo; to make the difference obvious, focusing on everyday friction and what&apos;s actually holding people back, leaning into the idea that it &ldquo;looks like cheating&rdquo; before breaking that perception, and using humour to show the gap between how people are functioning now and how they could be.
               </p>
             </div>
 
-            <div>
-              {ideas.map((idea, i) => (
-                <div key={idea.label} style={{
-                  paddingTop: i === 0 ? 0 : "24px",
-                  paddingBottom: "24px",
-                  borderBottom: i < ideas.length - 1 ? "1px solid rgba(255,255,255,0.12)" : "none",
-                }}>
-                  <p style={{
-                    fontFamily: "var(--font-condensed), sans-serif",
-                    fontWeight: 700,
-                    fontSize: "0.5rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.22em",
-                    color: "rgba(255,255,255,0.4)",
-                    marginBottom: "8px",
-                  }}>{idea.label}</p>
-                  <p style={{
-                    fontFamily: "var(--font-condensed), sans-serif",
-                    fontWeight: 800,
-                    fontSize: "1.125rem",
-                    textTransform: "uppercase",
-                    letterSpacing: "-0.01em",
-                    lineHeight: 1.05,
-                    color: "#fff",
-                    marginBottom: "8px",
-                  }}>{idea.title}</p>
-                  <p style={{ fontSize: "0.9375rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.65 }}>
-                    {idea.body}
-                  </p>
-                </div>
+            {/* Directions — accordion */}
+            <div style={{ paddingTop: "4px" }}>
+              <p style={{
+                fontFamily: "var(--font-condensed), sans-serif",
+                fontWeight: 700,
+                fontSize: "0.5rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.22em",
+                color: "rgba(255,255,255,0.4)",
+                marginBottom: "4px",
+                borderTop: "1px solid rgba(255,255,255,0.12)",
+                paddingTop: "18px",
+              }}>Directions</p>
+              {directions.map(d => (
+                <DirectionItem key={d.label} label={d.label} title={d.title} />
               ))}
             </div>
+
           </div>
         </div>
       </section>
