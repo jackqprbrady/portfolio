@@ -7,7 +7,7 @@ const narrativeCards = [
     embed: "https://player.vimeo.com/video/349462517",
     title: "Save Our Shirt",
     summary: "A fake outrage stunt that flipped into a pro-fan reveal.",
-    context: "A hoax football kit with a huge sponsor sash provoked outrage before revealing the real campaign was to unsponsor the shirt.",
+    context: "A hoax football kit with a huge sponsor provoked outrage before revealing the real campaign was to unsponsor the shirt.",
     lens: "Provoke attention first, then reframe it.",
     category: "Narrative",
   },
