@@ -7,8 +7,6 @@ const narrativeCards = [
     summary: "A fake outrage stunt that flipped into a pro-fan reveal.",
     context: "A hoax football kit with a huge sponsor sash provoked outrage before revealing the real campaign was to unsponsor the shirt.",
     lens: "Provoke attention first, then reframe it.",
-    takeaway: "Controversy can be used to build trust when resolved correctly.",
-    enhanced: "The category needs reframing, not explaining.",
   },
   {
     embed: "https://player.vimeo.com/video/332046704",
@@ -16,8 +14,6 @@ const narrativeCards = [
     summary: "A story-led ad that never directly sells the product.",
     context: "Rhodri Giggs fronts a campaign about rewards vs loyalty without mentioning betting.",
     lens: "Let personality and narrative carry the message.",
-    takeaway: "You don't always need to sell directly to sell effectively.",
-    enhanced: "Story can reduce resistance better than explanation.",
   },
   {
     embed: "https://player.vimeo.com/video/1137747617",
@@ -25,8 +21,6 @@ const narrativeCards = [
     summary: "A culturally tuned ad that speaks with the audience, not at them.",
     context: "Danny Dyer explores England's relationship with Europe in a relatable tone.",
     lens: "Talk to people like they already understand.",
-    takeaway: "Familiar voices make complex or controversial topics accessible.",
-    enhanced: "Tone will determine whether people lean in or reject it.",
   },
 ];
 
@@ -37,8 +31,6 @@ const conversionCards = [
     summary: "A product film disguised as entertainment.",
     context: "A cinematic film introducing the Paddy Power app and its features.",
     lens: "Make product education feel like content.",
-    takeaway: "Utility can be presented in a way that still feels engaging.",
-    enhanced: "Complex ideas need to feel watchable, not instructional.",
   },
   {
     embed: "https://player.vimeo.com/video/674099053",
@@ -46,8 +38,6 @@ const conversionCards = [
     summary: "Product features explained through a relatable moment.",
     context: "A scenario-driven ad showing how game features give players another chance.",
     lens: "Show benefits through situations people understand.",
-    takeaway: "Clarity doesn't need to be boring.",
-    enhanced: "The more relatable the framing, the easier the adoption.",
   },
   {
     embed: "https://www.youtube.com/embed/GCe9t_cguQ",
@@ -55,37 +45,21 @@ const conversionCards = [
     summary: "A product mechanic turned into a fan-friendly moment.",
     context: "A campaign showing how bets carry over to substitute players.",
     lens: "Turn functional improvements into emotional wins.",
-    takeaway: "People care about what improves their experience.",
-    enhanced: "Benefits should feel personal, not technical.",
   },
-];
-
-const thinkingPoints = [
-  { n: "01", text: "Attention first" },
-  { n: "02", text: "Narrative lowers resistance" },
-  { n: "03", text: "Repurpose everything" },
-  { n: "04", text: "Tension is a tool" },
-  { n: "05", text: "People carry belief better than brands" },
 ];
 
 const directions = [
   {
     title: "What People Think vs Reality",
-    hook: '"This is cheating" vs "This is regulated science"',
-    execution: "Fast contrast edits",
-    why: "Reframes instantly",
+    idea: "Fast contrast cuts. \"This is cheating\" vs \"This is regulated science\". Reframes the category in seconds.",
   },
   {
     title: "Engineered Athlete",
-    hook: "Treat the athlete like a system",
-    execution: "Data + performance visuals",
-    why: "Makes science feel premium",
+    idea: "Treat the athlete like a system. Data, performance visuals, premium science. Makes the product feel inevitable.",
   },
   {
     title: "Road to May",
-    hook: "Follow athletes preparing",
-    execution: "Serialised short-form content",
-    why: "Builds anticipation and investment",
+    idea: "Follow athletes preparing. Short-form and serialised. Builds the kind of investment that makes the product feel personal.",
   },
 ];
 
@@ -124,17 +98,11 @@ export default function Home() {
           Turning Skepticism Into Curiosity — and Curiosity Into Action.
         </h1>
 
-        <div style={{ display: "flex", alignItems: "flex-start", gap: "32px", flexWrap: "wrap" }}>
-          <div style={{ width: "32px", height: "1px", background: "var(--accent)", marginTop: "12px", flexShrink: 0, opacity: 0.8 }} />
-          <p style={{
-            fontSize: "0.9375rem",
-            lineHeight: 1.75,
-            color: "#666",
-            maxWidth: "480px",
-            flex: 1,
-          }}>
-            I've worked in one of the least trusted categories in sport and entertainment.
-            My job has been to make people stop, watch, laugh, reconsider — and then act.
+        <div style={{ display: "flex", alignItems: "flex-start", gap: "28px", flexWrap: "wrap" }}>
+          <div style={{ width: "28px", height: "1px", background: "var(--accent)", marginTop: "11px", flexShrink: 0, opacity: 0.8 }} />
+          <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#666", maxWidth: "460px", flex: 1 }}>
+            I've spent years in a category few people trust — making work that earns attention
+            rather than demanding it. This is a selection of that work.
           </p>
         </div>
       </section>
@@ -145,151 +113,65 @@ export default function Home() {
       {/* ── CONVERSION CAROUSEL ── */}
       <VideoCarousel cards={conversionCards} label="Paid / CTA / Conversion" index="02" />
 
-      {/* ── HOW I THINK ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "48px 0 48px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
-          <p style={{
-            fontSize: "0.6875rem",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
-            color: "#444",
-            marginBottom: "32px",
-          }}>
-            03 · How I Think
-          </p>
-          <div>
-            {thinkingPoints.map(({ n, text }, i) => (
-              <div key={n} style={{
-                display: "flex",
-                alignItems: "baseline",
-                gap: "1.5rem",
-                padding: "0.875rem 0",
-                borderBottom: i < thinkingPoints.length - 1 ? "1px solid var(--border)" : "none",
-              }}>
-                <span style={{
-                  fontSize: "0.625rem",
-                  color: "var(--accent)",
-                  fontWeight: 700,
-                  letterSpacing: "0.08em",
-                  flexShrink: 0,
-                  opacity: 0.7,
-                  minWidth: "20px",
-                }}>
-                  {n}
-                </span>
-                <p style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "clamp(1.25rem, 2.5vw, 2rem)",
-                  color: "var(--fg)",
-                  fontWeight: 400,
-                  lineHeight: 1.15,
-                  letterSpacing: "-0.015em",
-                }}>
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHY THIS MATTERS ── */}
+      {/* ── ENHANCED NOTE ── */}
       <section style={{ borderTop: "1px solid var(--border)", padding: "48px 0" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
-          <div style={{
-            background: "#0c1a0c",
-            border: "1px solid #1c301c",
-            borderRadius: "12px",
-            padding: "clamp(32px, 4vw, 56px)",
-          }}>
+          <div style={{ maxWidth: "600px" }}>
             <p style={{
               fontSize: "0.625rem",
               fontWeight: 700,
               textTransform: "uppercase",
               letterSpacing: "0.15em",
               color: "var(--accent)",
-              marginBottom: "20px",
+              marginBottom: "16px",
+              opacity: 0.8,
             }}>
-              Why This Matters for Enhanced
+              On Enhanced
             </p>
-            <h2 style={{
+            <p style={{
               fontFamily: "var(--font-serif)",
-              fontSize: "clamp(1.5rem, 3vw, 2.5rem)",
-              fontWeight: 400,
-              lineHeight: 1.2,
-              letterSpacing: "-0.02em",
+              fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)",
+              lineHeight: 1.4,
               color: "var(--fg)",
-              marginBottom: "20px",
-              maxWidth: "620px",
+              marginBottom: "16px",
+              fontWeight: 400,
             }}>
-              Enhanced doesn't have an awareness problem — it has a framing problem.
-            </h2>
-            <div style={{ width: "32px", height: "1px", background: "var(--accent)", marginBottom: "20px", opacity: 0.5 }} />
-            <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#777", maxWidth: "520px" }}>
-              Most people will encounter it with skepticism. The opportunity is to shift how it's
-              understood before trying to explain it. That means making the category feel human,
-              watchable and culturally relevant — not technical or defensive.
+              The category has a framing problem, not an awareness one.
+            </p>
+            <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#666" }}>
+              Most people arrive skeptical. The work I find most interesting is what shifts
+              that before anyone's tried to explain the product. A few things I'd look at:
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* ── DIRECTIONS ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "48px 0 80px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
-          <p style={{
-            fontSize: "0.6875rem",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
-            color: "#444",
-            marginBottom: "32px",
-          }}>
-            04 · A Few Directions I'd Explore
-          </p>
+          {/* Directions — casual, not structured */}
           <div style={{
+            marginTop: "32px",
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1rem",
+            gap: "1px",
+            background: "var(--border)",
+            border: "1px solid var(--border)",
+            borderRadius: "10px",
+            overflow: "hidden",
           }}>
-            {directions.map((d, i) => (
+            {directions.map((d) => (
               <div key={d.title} style={{
                 background: "var(--card-bg)",
-                border: "1px solid var(--border)",
-                borderRadius: "10px",
-                padding: "1.5rem",
-                position: "relative",
-                overflow: "hidden",
+                padding: "1.25rem 1.5rem",
               }}>
-                <span style={{
-                  position: "absolute",
-                  top: "1rem",
-                  right: "1.25rem",
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "2.5rem",
-                  color: "#1a1a1a",
-                  lineHeight: 1,
-                  userSelect: "none",
-                }}>
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 style={{
-                  fontFamily: "var(--font-serif)",
-                  fontSize: "1.125rem",
-                  fontWeight: 400,
+                <p style={{
+                  fontSize: "0.8125rem",
+                  fontWeight: 600,
                   color: "var(--fg)",
-                  marginBottom: "1.25rem",
+                  marginBottom: "8px",
                   lineHeight: 1.3,
-                  maxWidth: "180px",
                 }}>
                   {d.title}
-                </h3>
-                <dl style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                  <DField label="Hook" value={d.hook} />
-                  <DField label="Execution" value={d.execution} />
-                  <DField label="Why it works" value={d.why} accent />
-                </dl>
+                </p>
+                <p style={{ fontSize: "0.8125rem", color: "#666", lineHeight: 1.6 }}>
+                  {d.idea}
+                </p>
               </div>
             ))}
           </div>
@@ -309,23 +191,5 @@ export default function Home() {
       </div>
 
     </main>
-  );
-}
-
-function DField({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
-  return (
-    <div>
-      <dt style={{
-        fontSize: "0.5625rem",
-        fontWeight: 700,
-        textTransform: "uppercase",
-        letterSpacing: "0.1em",
-        color: accent ? "var(--accent)" : "#333",
-        marginBottom: "0.2rem",
-      }}>
-        {label}
-      </dt>
-      <dd style={{ fontSize: "0.8125rem", color: "#777", lineHeight: 1.5 }}>{value}</dd>
-    </div>
   );
 }

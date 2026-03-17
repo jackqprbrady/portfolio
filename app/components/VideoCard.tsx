@@ -9,11 +9,9 @@ interface VideoCardProps {
   summary: string;
   context: string;
   lens: string;
-  takeaway: string;
-  enhanced: string;
 }
 
-export default function VideoCard({ embed, title, summary, context, lens, takeaway, enhanced }: VideoCardProps) {
+export default function VideoCard({ embed, title, summary, context, lens }: VideoCardProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -25,17 +23,10 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
       display: "flex",
       flexDirection: "column",
     }}>
-      {/* Video */}
       <div className="video-wrapper">
-        <iframe
-          src={embed}
-          title={title}
-          allowFullScreen
-          allow="fullscreen; picture-in-picture"
-        />
+        <iframe src={embed} title={title} allowFullScreen allow="fullscreen; picture-in-picture" />
       </div>
 
-      {/* Content */}
       <div style={{ padding: "1rem", flex: 1, display: "flex", flexDirection: "column" }}>
         <h3 style={{
           fontSize: "0.9375rem",
@@ -47,15 +38,10 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
         }}>
           {title}
         </h3>
-        <p style={{
-          fontSize: "0.8125rem",
-          color: "#555",
-          lineHeight: 1.55,
-        }}>
+        <p style={{ fontSize: "0.8125rem", color: "#555", lineHeight: 1.55 }}>
           {summary}
         </p>
 
-        {/* Toggle */}
         <button
           onClick={() => setOpen(!open)}
           style={{
@@ -76,11 +62,12 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
             width: "100%",
             textAlign: "left",
             transition: "color 0.15s",
+            border: "none",
           }}
           onMouseEnter={e => (e.currentTarget.style.color = "var(--fg)")}
           onMouseLeave={e => (e.currentTarget.style.color = "#444")}
         >
-          <span style={{ flex: 1 }}>Unpack this</span>
+          <span style={{ flex: 1 }}>Behind this</span>
           <ChevronDown size={12} style={{
             transform: open ? "rotate(180deg)" : "rotate(0deg)",
             transition: "transform 0.2s ease",
@@ -88,16 +75,9 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
         </button>
 
         {open && (
-          <div style={{
-            marginTop: "12px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}>
+          <div style={{ marginTop: "12px", display: "flex", flexDirection: "column", gap: "10px" }}>
             <Field label="Context" value={context} />
-            <Field label="My Lens" value={lens} />
-            <Field label="What I Take From This" value={takeaway} />
-            <Field label="Why Enhanced" value={enhanced} accent />
+            <Field label="My lens" value={lens} />
           </div>
         )}
       </div>
@@ -105,7 +85,7 @@ export default function VideoCard({ embed, title, summary, context, lens, takeaw
   );
 }
 
-function Field({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
+function Field({ label, value }: { label: string; value: string }) {
   return (
     <div>
       <p style={{
@@ -113,8 +93,8 @@ function Field({ label, value, accent }: { label: string; value: string; accent?
         fontWeight: 700,
         textTransform: "uppercase",
         letterSpacing: "0.1em",
-        color: accent ? "var(--accent)" : "#3a3a3a",
-        marginBottom: "2px",
+        color: "#3a3a3a",
+        marginBottom: "3px",
       }}>
         {label}
       </p>
