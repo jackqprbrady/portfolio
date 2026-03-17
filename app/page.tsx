@@ -154,8 +154,8 @@ export default function Home() {
                 marginBottom: "24px",
               }}>
                 {[
-                  { num: "10+", label: "Years" },
-                  { num: "6", label: "Campaigns" },
+                  { num: "6+", label: "Years" },
+                  { num: "100k+", label: "Video/imagery assets" },
                   { num: "200M+", label: "Views across social" },
                 ].map(s => (
                   <div key={s.num}>
