@@ -1,5 +1,6 @@
 import VideoCard from "./components/VideoCard";
 import DirectionItem from "./components/DirectionItem";
+import WorkInfo from "./components/WorkInfo";
 
 const narrativeCards = [
   {
@@ -196,7 +197,7 @@ export default function Home() {
         borderBottom: "1px solid rgba(0,0,0,0.07)",
       }}>
         <div className="container">
-          <p className="section-label-light">Narrative / Cultural</p>
+          <WorkInfo />
           <div className="video-grid">
             {narrativeCards.map(c => <VideoCard key={c.title} {...c} />)}
           </div>
