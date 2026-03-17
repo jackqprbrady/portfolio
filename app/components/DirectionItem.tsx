@@ -70,7 +70,7 @@ export default function DirectionItem({ label, title }: Props) {
           paddingRight: "32px",
         }}>
           {title === "Flip the exclusion" && "Open where people already are: \"this isn't for you\", \"this looks like cheating\". Use that reaction instead of avoiding it. Start with what they picture: elite sprinters, lab environments, extreme performance. Then flip it quickly. Cut to what it actually looks like: a normal routine, a consult, better sleep, more consistent energy. Same person, just functioning better."}
-          {title === "You vs You" && "Not elite vs amateur. Same person, same life. Just functioning better. The comparison that hits hardest is the one people can actually see themselves in."}
+          {title === "You vs You" && "Not elite vs amateur. Same person, same life. Just functioning better. Show it side by side: late nights, low energy, skipped training on one side; better sleep, consistent routines, sharper focus on the other. Same environment, same schedule, nothing dramatic. The difference is small but obvious. That's what makes it land: people can see themselves in both."}
           {title === "Everyday friction" && "Energy, recovery, consistency. Not transformation. Removing what's slowing people down and showing the gap between how they feel now and how they could feel."}
           {title === "Looks like cheating" && "Lean into the discomfort before breaking it. The \"cheating\" frame is already in the room. Own it, then dissolve it with what it actually is."}
           {title === "Humour as contrast" && "Show the gap between current state and potential state with a light touch. The distance between how people are functioning now and how they could be is the joke and the sell."}
