@@ -1,4 +1,4 @@
-import VideoCarousel from "./components/VideoCarousel";
+import VideoCard from "./components/VideoCard";
 
 const narrativeCards = [
   {
@@ -48,146 +48,136 @@ const conversionCards = [
   },
 ];
 
-const directions = [
-  {
-    title: "What People Think vs Reality",
-    idea: "Fast contrast cuts. \"This is cheating\" vs \"This is regulated science\". Reframes the category in seconds.",
-  },
-  {
-    title: "Engineered Athlete",
-    idea: "Treat the athlete like a system. Data, performance visuals, premium science. Makes the product feel inevitable.",
-  },
-  {
-    title: "Road to May",
-    idea: "Follow athletes preparing. Short-form and serialised. Builds the kind of investment that makes the product feel personal.",
-  },
-];
-
 export default function Home() {
   return (
-    <main style={{ background: "var(--bg)", minHeight: "100vh", overflowX: "hidden" }}>
+    <main style={{ background: "#0a0a0a", minHeight: "100vh" }}>
 
-      {/* ── HERO ── */}
-      <section style={{
-        maxWidth: "1100px",
-        margin: "0 auto",
-        padding: "64px 40px 48px",
-        borderBottom: "1px solid var(--border)",
-      }}>
+      {/* HERO */}
+      <div className="container" style={{ paddingTop: "72px", paddingBottom: "56px" }}>
         <p style={{
           fontSize: "0.6875rem",
           fontWeight: 600,
-          letterSpacing: "0.18em",
+          letterSpacing: "0.2em",
           textTransform: "uppercase",
-          color: "#444",
-          marginBottom: "28px",
+          color: "#3a3a3a",
+          marginBottom: "32px",
         }}>
           Jack Brady · Creative Strategy & Film
         </p>
-
         <h1 style={{
           fontFamily: "var(--font-serif)",
-          fontSize: "clamp(2.25rem, 4vw, 3.5rem)",
+          fontSize: "clamp(2rem, 3.5vw, 3rem)",
           fontWeight: 400,
-          lineHeight: 1.1,
+          lineHeight: 1.15,
           letterSpacing: "-0.02em",
-          color: "var(--fg)",
-          maxWidth: "680px",
+          color: "#e8e8e8",
+          maxWidth: "640px",
           marginBottom: "24px",
         }}>
           Turning Skepticism Into Curiosity — and Curiosity Into Action.
         </h1>
+        <p style={{
+          fontSize: "0.9375rem",
+          lineHeight: 1.75,
+          color: "#555",
+          maxWidth: "480px",
+        }}>
+          I've spent years in a category few people trust — making work that earns
+          attention rather than demanding it.
+        </p>
+      </div>
 
-        <div style={{ display: "flex", alignItems: "flex-start", gap: "28px", flexWrap: "wrap" }}>
-          <div style={{ width: "28px", height: "1px", background: "var(--accent)", marginTop: "11px", flexShrink: 0, opacity: 0.8 }} />
-          <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#666", maxWidth: "460px", flex: 1 }}>
-            I've spent years in a category few people trust — making work that earns attention
-            rather than demanding it. This is a selection of that work.
-          </p>
+      <hr className="divider" />
+
+      {/* NARRATIVE */}
+      <div className="container" style={{ paddingTop: "40px", paddingBottom: "48px" }}>
+        <p style={{
+          fontSize: "0.625rem",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          letterSpacing: "0.18em",
+          color: "#3a3a3a",
+          marginBottom: "20px",
+        }}>
+          <span style={{ color: "#4ade80", marginRight: "10px", opacity: 0.7 }}>01</span>
+          Narrative / Cultural
+        </p>
+        <div className="video-grid">
+          {narrativeCards.map(c => <VideoCard key={c.title} {...c} />)}
         </div>
-      </section>
+      </div>
 
-      {/* ── NARRATIVE CAROUSEL ── */}
-      <VideoCarousel cards={narrativeCards} label="Narrative / Cultural" index="01" />
+      <hr className="divider" />
 
-      {/* ── CONVERSION CAROUSEL ── */}
-      <VideoCarousel cards={conversionCards} label="Paid / CTA / Conversion" index="02" />
+      {/* CONVERSION */}
+      <div className="container" style={{ paddingTop: "40px", paddingBottom: "48px" }}>
+        <p style={{
+          fontSize: "0.625rem",
+          fontWeight: 700,
+          textTransform: "uppercase",
+          letterSpacing: "0.18em",
+          color: "#3a3a3a",
+          marginBottom: "20px",
+        }}>
+          <span style={{ color: "#4ade80", marginRight: "10px", opacity: 0.7 }}>02</span>
+          Paid / CTA / Conversion
+        </p>
+        <div className="video-grid">
+          {conversionCards.map(c => <VideoCard key={c.title} {...c} />)}
+        </div>
+      </div>
 
-      {/* ── ENHANCED NOTE ── */}
-      <section style={{ borderTop: "1px solid var(--border)", padding: "48px 0" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 40px" }}>
-          <div style={{ maxWidth: "600px" }}>
-            <p style={{
-              fontSize: "0.625rem",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "0.15em",
-              color: "var(--accent)",
-              marginBottom: "16px",
-              opacity: 0.8,
-            }}>
-              On Enhanced
-            </p>
-            <p style={{
-              fontFamily: "var(--font-serif)",
-              fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)",
-              lineHeight: 1.4,
-              color: "var(--fg)",
-              marginBottom: "16px",
-              fontWeight: 400,
-            }}>
-              The category has a framing problem, not an awareness one.
-            </p>
-            <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#666" }}>
-              Most people arrive skeptical. The work I find most interesting is what shifts
-              that before anyone's tried to explain the product. A few things I'd look at:
-            </p>
-          </div>
+      <hr className="divider" />
 
-          {/* Directions — casual, not structured */}
-          <div style={{
-            marginTop: "32px",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1px",
-            background: "var(--border)",
-            border: "1px solid var(--border)",
-            borderRadius: "10px",
-            overflow: "hidden",
+      {/* ENHANCED NOTE */}
+      <div className="container" style={{ paddingTop: "40px", paddingBottom: "72px" }}>
+        <div style={{ maxWidth: "560px" }}>
+          <p style={{
+            fontSize: "0.625rem",
+            fontWeight: 700,
+            textTransform: "uppercase",
+            letterSpacing: "0.18em",
+            color: "#4ade80",
+            opacity: 0.7,
+            marginBottom: "20px",
           }}>
-            {directions.map((d) => (
-              <div key={d.title} style={{
-                background: "var(--card-bg)",
-                padding: "1.25rem 1.5rem",
-              }}>
-                <p style={{
-                  fontSize: "0.8125rem",
-                  fontWeight: 600,
-                  color: "var(--fg)",
-                  marginBottom: "8px",
-                  lineHeight: 1.3,
-                }}>
-                  {d.title}
-                </p>
-                <p style={{ fontSize: "0.8125rem", color: "#666", lineHeight: 1.6 }}>
-                  {d.idea}
-                </p>
+            On Enhanced
+          </p>
+          <p style={{
+            fontFamily: "var(--font-serif)",
+            fontSize: "clamp(1.25rem, 2vw, 1.625rem)",
+            lineHeight: 1.4,
+            color: "#e0e0e0",
+            marginBottom: "16px",
+            fontWeight: 400,
+          }}>
+            The category has a framing problem, not an awareness one.
+          </p>
+          <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "#555", marginBottom: "32px" }}>
+            Most people arrive skeptical. The interesting work shifts that before anyone's
+            tried to explain the product. A few things I'd look at:
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            {[
+              { title: "What People Think vs Reality", body: "Fast contrast cuts. Reframes the category in seconds." },
+              { title: "Engineered Athlete", body: "Data, performance visuals, premium science. Makes the product feel inevitable." },
+              { title: "Road to May", body: "Follow athletes preparing. Short-form, serialised. Builds personal investment." },
+            ].map(d => (
+              <div key={d.title} style={{ display: "flex", gap: "16px", alignItems: "baseline" }}>
+                <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: "#4ade80", opacity: 0.5, flexShrink: 0, marginTop: "8px" }} />
+                <div>
+                  <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "#aaa" }}>{d.title} — </span>
+                  <span style={{ fontSize: "0.875rem", color: "#555" }}>{d.body}</span>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* ── FOOTER ── */}
-      <div style={{
-        borderTop: "1px solid var(--border)",
-        maxWidth: "1100px",
-        margin: "0 auto",
-        padding: "24px 40px",
-      }}>
-        <p style={{ fontSize: "0.6875rem", color: "#333", letterSpacing: "0.05em" }}>
-          Jack Brady · 2025
-        </p>
+      <hr className="divider" />
+      <div className="container" style={{ paddingTop: "20px", paddingBottom: "20px" }}>
+        <p style={{ fontSize: "0.6875rem", color: "#2a2a2a" }}>Jack Brady · 2025</p>
       </div>
 
     </main>
