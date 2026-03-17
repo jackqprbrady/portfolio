@@ -72,12 +72,6 @@ const ideas = [
   },
 ];
 
-const stats = [
-  { num: "10+", label: "Years in category" },
-  { num: "6", label: "Campaigns featured" },
-  { num: "£m", label: "Media managed" },
-];
-
 export default function Home() {
   return (
     <main>
@@ -85,52 +79,54 @@ export default function Home() {
       {/* ── NAV ── */}
       <nav className="nav">
         <div className="nav-logo">
-          <EnhancedMark color="#1A04FF" />
+          <EnhancedMark color="rgba(255,255,255,0.7)" />
           Jack Brady
-          <span className="nav-tagline">Creative Strategy &amp; Film</span>
+        </div>
+        <div className="nav-links">
+          <a href="#narrative" className="nav-link">Work</a>
+          <a href="#enhanced" className="nav-link">Ideas</a>
+          <a href="mailto:jackqprbrady@gmail.com" className="nav-link">Contact</a>
         </div>
         <a href="mailto:jackqprbrady@gmail.com" className="nav-cta">
           Get in touch
         </a>
       </nav>
 
-      {/* ── HERO — 2-column, tight ── */}
+      {/* ── HERO ── */}
       <section style={{
         background: "var(--black)",
-        paddingTop: "112px",
-        paddingBottom: "56px",
+        paddingTop: "108px",
+        paddingBottom: "60px",
         borderBottom: "1px solid rgba(255,255,255,0.07)",
       }}>
         <div className="container">
 
-          {/* Top label */}
           <p style={{
             fontFamily: "var(--font-condensed), sans-serif",
             fontWeight: 700,
             fontSize: "0.5625rem",
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.28)",
+            color: "rgba(255,255,255,0.45)",
             marginBottom: "28px",
             display: "flex",
             alignItems: "center",
             gap: "10px",
           }}>
-            <span style={{ display: "block", width: "18px", height: "1px", background: "rgba(255,255,255,0.22)", flexShrink: 0 }} />
+            <span style={{ display: "block", width: "18px", height: "1px", background: "rgba(255,255,255,0.3)", flexShrink: 0 }} />
             Betting &amp; Sports · 10+ Years
           </p>
 
-          {/* Two-column: headline left, stats + body right */}
           <div style={{
             display: "grid",
-            gridTemplateColumns: "1fr 380px",
+            gridTemplateColumns: "1fr 360px",
             gap: "64px",
-            alignItems: "end",
+            alignItems: "center",
           }}>
             <h1 style={{
               fontFamily: "var(--font-condensed), sans-serif",
               fontWeight: 800,
-              fontSize: "clamp(3rem, 5.6vw, 5.25rem)",
+              fontSize: "clamp(3.5rem, 7vw, 6.5rem)",
               textTransform: "uppercase",
               letterSpacing: "-0.03em",
               lineHeight: 0.92,
@@ -139,43 +135,47 @@ export default function Home() {
               Turning Skepticism Into Curiosity — And Curiosity Into Action.
             </h1>
 
-            <div>
-              {/* Stats row */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+              {/* Stats */}
               <div style={{
-                display: "flex",
-                gap: "32px",
-                marginBottom: "28px",
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: "0",
                 paddingBottom: "28px",
                 borderBottom: "1px solid rgba(255,255,255,0.08)",
+                marginBottom: "28px",
               }}>
-                {stats.map(s => (
+                {[
+                  { num: "10+", label: "Years in category" },
+                  { num: "6", label: "Campaigns featured" },
+                  { num: "£m", label: "Media managed" },
+                ].map(s => (
                   <div key={s.num}>
                     <p style={{
                       fontFamily: "var(--font-condensed), sans-serif",
                       fontWeight: 800,
-                      fontSize: "1.75rem",
-                      letterSpacing: "-0.03em",
+                      fontSize: "2.5rem",
+                      letterSpacing: "-0.04em",
                       color: "#fff",
                       lineHeight: 1,
-                      marginBottom: "4px",
+                      marginBottom: "6px",
                     }}>{s.num}</p>
                     <p style={{
                       fontFamily: "var(--font-condensed), sans-serif",
                       fontWeight: 600,
-                      fontSize: "0.5625rem",
-                      letterSpacing: "0.14em",
+                      fontSize: "0.5rem",
+                      letterSpacing: "0.16em",
                       textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.3)",
+                      color: "rgba(255,255,255,0.35)",
                     }}>{s.label}</p>
                   </div>
                 ))}
               </div>
-
               {/* Body */}
               <p style={{
-                fontSize: "0.875rem",
+                fontSize: "0.9375rem",
                 lineHeight: 1.75,
-                color: "rgba(255,255,255,0.45)",
+                color: "rgba(255,255,255,0.6)",
               }}>
                 I&apos;ve spent years in a category few people trust — making work
                 that earns attention rather than demanding it.
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* ── NARRATIVE / CULTURAL ── */}
-      <section style={{
+      <section id="narrative" style={{
         background: "var(--black)",
         paddingTop: "40px",
         paddingBottom: "52px",
@@ -202,8 +202,8 @@ export default function Home() {
       </section>
 
       {/* ── PAID / CTA / CONVERSION ── */}
-      <section style={{
-        background: "#060606",
+      <section id="conversion" style={{
+        background: "#080808",
         paddingTop: "40px",
         paddingBottom: "52px",
         borderBottom: "1px solid rgba(255,255,255,0.07)",
@@ -217,16 +217,35 @@ export default function Home() {
       </section>
 
       {/* ── ON ENHANCED ── */}
-      <section style={{ background: "var(--blue)", paddingTop: "72px", paddingBottom: "72px" }}>
-        <div className="container">
+      <section id="enhanced" style={{ background: "var(--blue)", paddingTop: "96px", paddingBottom: "80px", position: "relative", overflow: "hidden" }}>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "40px" }}>
-            <EnhancedMark color="rgba(255,255,255,0.5)" />
+        {/* Background watermark */}
+        <div style={{
+          position: "absolute",
+          bottom: "-60px",
+          right: "-40px",
+          fontFamily: "var(--font-condensed), sans-serif",
+          fontWeight: 800,
+          fontSize: "clamp(8rem, 20vw, 22rem)",
+          textTransform: "uppercase",
+          letterSpacing: "-0.04em",
+          lineHeight: 1,
+          color: "rgba(255,255,255,0.04)",
+          pointerEvents: "none",
+          userSelect: "none",
+        }}>
+          Enhanced
+        </div>
+
+        <div className="container" style={{ position: "relative" }}>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "48px" }}>
+            <EnhancedMark color="rgba(255,255,255,0.5)" size={26} />
             <span style={{
               fontFamily: "var(--font-condensed), sans-serif",
               fontWeight: 800,
               fontSize: "0.625rem",
-              letterSpacing: "0.22em",
+              letterSpacing: "0.25em",
               textTransform: "uppercase",
               color: "rgba(255,255,255,0.5)",
             }}>
@@ -245,16 +264,16 @@ export default function Home() {
               <h2 style={{
                 fontFamily: "var(--font-condensed), sans-serif",
                 fontWeight: 800,
-                fontSize: "clamp(2rem, 3vw, 3rem)",
+                fontSize: "clamp(2.5rem, 3.8vw, 3.75rem)",
                 textTransform: "uppercase",
                 letterSpacing: "-0.03em",
-                lineHeight: 0.93,
+                lineHeight: 0.92,
                 color: "#fff",
-                marginBottom: "24px",
+                marginBottom: "28px",
               }}>
                 The Category Has A Framing Problem, Not An Awareness One.
               </h2>
-              <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "rgba(255,255,255,0.6)" }}>
+              <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "rgba(255,255,255,0.7)" }}>
                 Most people arrive skeptical. The interesting work shifts that before
                 anyone&apos;s tried to explain the product. A few directions I&apos;d look at:
               </p>
@@ -263,30 +282,30 @@ export default function Home() {
             <div>
               {ideas.map((idea, i) => (
                 <div key={idea.label} style={{
-                  paddingTop: i === 0 ? 0 : "22px",
-                  paddingBottom: "22px",
-                  borderBottom: i < ideas.length - 1 ? "1px solid rgba(255,255,255,0.15)" : "none",
+                  paddingTop: i === 0 ? 0 : "24px",
+                  paddingBottom: "24px",
+                  borderBottom: i < ideas.length - 1 ? "1px solid rgba(255,255,255,0.12)" : "none",
                 }}>
                   <p style={{
                     fontFamily: "var(--font-condensed), sans-serif",
                     fontWeight: 700,
                     fontSize: "0.5rem",
                     textTransform: "uppercase",
-                    letterSpacing: "0.2em",
+                    letterSpacing: "0.22em",
                     color: "rgba(255,255,255,0.4)",
-                    marginBottom: "7px",
+                    marginBottom: "8px",
                   }}>{idea.label}</p>
                   <p style={{
                     fontFamily: "var(--font-condensed), sans-serif",
                     fontWeight: 800,
-                    fontSize: "1.0625rem",
+                    fontSize: "1.125rem",
                     textTransform: "uppercase",
                     letterSpacing: "-0.01em",
                     lineHeight: 1.05,
                     color: "#fff",
-                    marginBottom: "7px",
+                    marginBottom: "8px",
                   }}>{idea.title}</p>
-                  <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.58)", lineHeight: 1.65 }}>
+                  <p style={{ fontSize: "0.9375rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.65 }}>
                     {idea.body}
                   </p>
                 </div>
@@ -298,19 +317,26 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer style={{
-        background: "var(--black)",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
-        padding: "18px 0",
-      }}>
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <footer style={{ background: "var(--black)" }}>
+        {/* Giant wordmark */}
+        <div style={{ borderBottom: "1px solid rgba(255,255,255,0.07)", overflow: "hidden" }}>
+          <span className="footer-wordmark">Jack Brady</span>
+        </div>
+
+        {/* Copyright bar */}
+        <div className="container" style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "16px 56px",
+        }}>
           <p style={{
             fontFamily: "var(--font-condensed), sans-serif",
             fontWeight: 700,
             fontSize: "0.5rem",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.15)",
+            color: "rgba(255,255,255,0.18)",
           }}>
             Jack Brady · 2025
           </p>
@@ -320,7 +346,7 @@ export default function Home() {
             fontSize: "0.5rem",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.15)",
+            color: "rgba(255,255,255,0.18)",
           }}>
             ≡+ Enhanced Games · Las Vegas · May 2026
           </p>
@@ -331,9 +357,10 @@ export default function Home() {
   );
 }
 
-function EnhancedMark({ color = "#1A04FF" }: { color?: string }) {
+function EnhancedMark({ color = "#1A04FF", size = 18 }: { color?: string; size?: number }) {
+  const h = Math.round(size * 14 / 18);
   return (
-    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={size} height={h} viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
       <rect y="0" width="10" height="2" fill={color} />
       <rect y="6" width="10" height="2" fill={color} />
       <rect y="12" width="10" height="2" fill={color} />

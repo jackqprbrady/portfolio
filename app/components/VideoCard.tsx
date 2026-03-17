@@ -16,14 +16,7 @@ export default function VideoCard({ embed, title, summary, context, lens, catego
   const [open, setOpen] = useState(false);
 
   return (
-    <div style={{
-      background: "#0a0a0a",
-      border: "1px solid rgba(255,255,255,0.07)",
-      borderTop: "2px solid #1A04FF",
-      borderRadius: "4px",
-      overflow: "hidden",
-    }}>
-      {/* Video */}
+    <div className="video-card">
       <div className="video-wrapper">
         <iframe src={embed} title={title} allowFullScreen allow="fullscreen; picture-in-picture" />
         <span className="video-tag">{category}</span>
@@ -33,10 +26,10 @@ export default function VideoCard({ embed, title, summary, context, lens, catego
         <p style={{
           fontFamily: "var(--font-condensed), sans-serif",
           fontWeight: 800,
-          fontSize: "0.9375rem",
+          fontSize: "0.875rem",
           textTransform: "uppercase",
           letterSpacing: "-0.01em",
-          color: "#e8e8e8",
+          color: "#ebebeb",
           lineHeight: 1.15,
           marginBottom: "6px",
         }}>
@@ -44,13 +37,12 @@ export default function VideoCard({ embed, title, summary, context, lens, catego
         </p>
         <p style={{
           fontSize: "0.8125rem",
-          color: "rgba(255,255,255,0.35)",
+          color: "rgba(255,255,255,0.5)",
           lineHeight: 1.55,
         }}>
           {summary}
         </p>
 
-        {/* Expand pill */}
         <button
           onClick={() => setOpen(v => !v)}
           style={{
@@ -60,10 +52,10 @@ export default function VideoCard({ embed, title, summary, context, lens, catego
             marginTop: "12px",
             padding: "5px 12px",
             borderRadius: "1600px",
-            border: "1px solid rgba(255,255,255,0.12)",
+            border: "1px solid rgba(255,255,255,0.2)",
             background: "none",
             cursor: "pointer",
-            color: "rgba(255,255,255,0.3)",
+            color: "rgba(255,255,255,0.45)",
             fontSize: "0.5625rem",
             letterSpacing: "0.14em",
             textTransform: "uppercase",
@@ -76,8 +68,8 @@ export default function VideoCard({ embed, title, summary, context, lens, catego
             (e.currentTarget as HTMLButtonElement).style.color = "#1A04FF";
           }}
           onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.12)";
-            (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.3)";
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(255,255,255,0.2)";
+            (e.currentTarget as HTMLButtonElement).style.color = "rgba(255,255,255,0.45)";
           }}
         >
           Behind this
@@ -111,15 +103,15 @@ function InfoRow({ label, value }: { label: string; value: string }) {
       <p style={{
         fontFamily: "var(--font-condensed), sans-serif",
         fontWeight: 700,
-        fontSize: "0.5625rem",
+        fontSize: "0.5rem",
         textTransform: "uppercase",
         letterSpacing: "0.18em",
-        color: "rgba(255,255,255,0.25)",
+        color: "rgba(255,255,255,0.3)",
         marginBottom: "4px",
       }}>
         {label}
       </p>
-      <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.55 }}>
+      <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.55 }}>
         {value}
       </p>
     </div>
