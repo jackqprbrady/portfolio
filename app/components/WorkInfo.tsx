@@ -71,7 +71,7 @@ export default function WorkInfo() {
             >
               Paddy Power News
             </a>
-            . Each video here is something I have been involved in from the earliest briefing sessions through to the finished cut: pushing back on the obvious routes, developing ideas from concept to script to screen. A big part of the role is also taking that content further. Repurposing and cutting it down for our own platforms so the same creative work can live across social, editorial, and owned channels in a way that actually suits each one.
+            . We aim to push back on the obvious routes, developing ideas from concept to script to screen. A big part of the role is also taking that content further. Repurposing and cutting it down for our own platforms so the same creative work can live across social, editorial, and owned channels in a way that actually suits each one.
           </p>
         </div>
       )}
