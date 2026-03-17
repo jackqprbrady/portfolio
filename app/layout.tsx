@@ -17,7 +17,7 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Jack Brady — Creative Strategy & Film",
+  title: "Jack Brady — Enhanced Profile",
   description: "Turning skepticism into curiosity — and curiosity into action.",
 };
 
