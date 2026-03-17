@@ -155,7 +155,7 @@ export default function Home() {
                 {[
                   { num: "10+", label: "Years" },
                   { num: "6", label: "Campaigns" },
-                  { num: "£m", label: "Media" },
+                  { num: "200M+", label: "Views across social" },
                 ].map(s => (
                   <div key={s.num}>
                     <p style={{
