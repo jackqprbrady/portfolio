@@ -62,7 +62,7 @@ export default function WorkInfo() {
             color: "rgba(0,0,0,0.6)",
             maxWidth: "680px",
           }}>
-            A collection of work from six years at Paddy Power. Each video here is something I was involved in across the full pipeline: from the earliest briefing sessions and creative development, through production and into the edit. That meant pushing back on the safe routes early, shaping how ideas moved from concept to script to screen.
+            Six years at Paddy Power, working across the full content pipeline. Each video here is something I was involved in from the earliest briefing sessions through to the finished cut: pushing back on the obvious routes, developing ideas from concept to script to screen. A big part of the role was also taking that content further. Repurposing and cutting it down for our own platforms, including Paddy Power News, so the same creative work could live across social, editorial, and owned channels in a way that actually suited each one.
           </p>
         </div>
       )}
