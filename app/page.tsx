@@ -29,30 +29,54 @@ const narrativeCards = [
   },
 ];
 
-const conversionCards = [
-  {
-    embed: "https://player.vimeo.com/video/132840149",
-    title: "Paddy Power App Film",
-    summary: "A product film disguised as entertainment.",
-    context: "A cinematic film introducing the Paddy Power app and its features.",
-    lens: "Make product education feel like content.",
-    category: "Product",
-  },
+const productCards = [
   {
     embed: "https://player.vimeo.com/video/674099053",
     title: "Paddy Power Games: Mum",
     summary: "Product features explained through a relatable moment.",
-    context: "A scenario-driven ad showing how game features give players another chance.",
-    lens: "Show benefits through situations people understand.",
+    context: "A scenario-driven ad showing how game features give players another chance. The lead character is a mum. The sell is reassurance, not excitement.",
+    lens: "When the audience is a parent, the emotional register changes. This does that.",
     category: "Conversion",
   },
   {
-    embed: "https://www.youtube.com/embed/ECplp93J270",
+    embed: "https://news.paddypower.com/assets/uploads/2023/12/Paddy-Power_Product-Video_uk-B-Version-MBT.mp4",
+    title: "Money Back Tokens",
+    summary: "Step-by-step product walkthrough built for retention.",
+    context: "App UI simulation, on-screen captions, clear action steps. The same format as supplement onboarding, app tutorials, and lifecycle email sequences.",
+    lens: "This is lifecycle content. The category just happens to be betting.",
+    category: "Lifecycle",
+  },
+  {
+    embed: "https://news.paddypower.com/assets/uploads/2021/10/PP-games-edit-600s-400-221021.mp4",
+    title: "Games: Favourites",
+    summary: "An app feature demo in the style of a wellness tutorial.",
+    context: "Bright text, hand-on-phone footage, routine-first framing. The visual language mirrors how lifestyle and DTC brands explain a new habit.",
+    lens: "The format is already DTC. The audience is the only thing that changes.",
+    category: "App Demo",
+  },
+  {
+    embed: "https://news.paddypower.com/wp-content/uploads/2022/11/PP-BB-600x500-v2.mp4",
+    title: "Bet Builder",
+    summary: "A 20-second product explainer built for the feed.",
+    context: "Bold type, simple animation, square format. Explains a complex product mechanic in one scroll-stop. No voiceover, no setup.",
+    lens: "Snackable product education is the same skill whatever you are selling.",
+    category: "Explainer",
+  },
+  {
+    embed: "https://news.paddypower.com/assets/uploads/2024/02/PP-Supersub-16x9-23s.mp4",
     title: "Super Sub",
-    summary: "A product mechanic turned into a fan-friendly moment.",
-    context: "A campaign showing how bets carry over to substitute players.",
-    lens: "Turn functional improvements into emotional wins.",
+    summary: "A product mechanic built around pre-empting the objection.",
+    context: "23-second vertical video that addresses the 'what if my player gets subbed off' anxiety before users raise it. Mobile-first, caption-led, no wasted seconds.",
+    lens: "Pre-empting the objection is a lifecycle skill, not a sports one.",
     category: "Product",
+  },
+  {
+    embed: "https://news.paddypower.com/wp-content/uploads/2022/12/BonanzaMegapays_MegaJackpot_06-12-2022_v001.mp4",
+    title: "Jackpot Win: Bonanza Megapays",
+    summary: "UGC-style product capture that shows the moment, not the pitch.",
+    context: "A real player hitting a mega jackpot, captured as screen footage. No studio, no voiceover. The product does the work.",
+    lens: "When the product is the story, get out of the way.",
+    category: "Social",
   },
 ];
 
@@ -180,8 +204,7 @@ export default function Home() {
                 ))}
               </div>
               <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "rgba(255,255,255,0.55)" }}>
-                Years in a category few people trust, making work
-                that earns attention rather than demanding it.
+                Years in a category few people trust, making work that earns attention rather than demanding it. Product education, trust-building, objection handling. The creative mechanics transfer.
               </p>
             </div>
 
@@ -204,17 +227,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PAID / CTA / CONVERSION — white bg ── */}
-      <section id="conversion" style={{
-        background: "#ffffff",
+      {/* ── PRODUCT / SOCIAL ── */}
+      <section id="product" style={{
+        background: "#0a0a0a",
         paddingTop: "44px",
         paddingBottom: "56px",
-        borderBottom: "1px solid rgba(0,0,0,0.07)",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
       }}>
         <div className="container">
-          <p className="section-label-light">Paid / CTA / Conversion</p>
+          <p className="section-label">Product / Social</p>
           <div className="video-grid">
-            {conversionCards.map(c => <VideoCard key={c.title} {...c} />)}
+            {productCards.map(c => <VideoCard key={c.title} {...c} />)}
           </div>
         </div>
       </section>
@@ -285,11 +308,11 @@ export default function Home() {
 
             {/* Body copy */}
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                There&apos;s already a reaction when people first encounter Enhanced. It feels extreme, not for them, maybe even a bit uncomfortable. So instead of trying to soften that, I think you lean straight into it. Open where they already are, &ldquo;this isn&apos;t for you&rdquo;, &ldquo;this looks like cheating&rdquo;, and then flip it quickly. Show what it actually looks like before they&apos;ve had time to settle into that assumption. Not elite performance or lab environments, but normal routines, a consult, bloodwork being reviewed, someone using Enhanced as part of their day, sleeping better, feeling more consistent. Same person, same life, just functioning better.
+                  <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
+                The product section above is the bridge. Money Back Tokens is a retention sequence. Favourites is an app onboarding tutorial. Super Sub is objection-handling creative. Same formats, same psychology as DTC lifecycle. The category is just different.
               </p>
-<p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                Some directions this could go in: starting with exclusion and flipping it back into relevance, doing &ldquo;you vs you&rdquo; instead of athlete comparisons, focusing on everyday friction and what&apos;s actually holding people back, leaning into the idea that it &ldquo;looks like cheating&rdquo; before breaking that, and using a bit of humour to show the gap between how people are functioning now vs how they could be.
+              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
+                For supplements, moms, everyday users: I&apos;d start with exclusion and flip it. &ldquo;This isn&apos;t for you&rdquo; before showing what it actually looks like in a normal routine. Not lab environments or elite athletes, but a consult, bloodwork reviewed, someone sleeping better. Same person, same life, functioning better. Some directions: &ldquo;you vs you&rdquo; instead of athlete comparisons, everyday friction and what&apos;s holding people back, &ldquo;looks like cheating&rdquo; before breaking that, humour to show the gap between now and could-be.
               </p>
             </div>
 
