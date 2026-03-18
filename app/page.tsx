@@ -253,10 +253,10 @@ export default function Home() {
             {/* Body copy */}
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                The product section above is the bridge. Gemma Collins and Coleen Rooney reframing casino as a fun night in — that is the moms and everyday women demographic. Money Back Tokens is a retention sequence. Favourites is an app onboarding tutorial. Super Sub is objection-handling. Same formats, same psychology as DTC lifecycle.
+                The work above is the bridge. Gemma Collins and Coleen Rooney reframing casino as a fun night in. That is the moms and everyday women demographic. Money Back Tokens is a retention sequence. Favourites is an app onboarding tutorial. Super Sub is objection-handling. Same formats, same psychology as DTC lifecycle. Different category.
               </p>
               <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                For supplements, moms, everyday users: I&apos;d start with exclusion and flip it. &ldquo;This isn&apos;t for you&rdquo; before showing what it actually looks like in a normal routine. Not lab environments or elite athletes, but a consult, bloodwork reviewed, someone sleeping better. Same person, same life, functioning better. Some directions: &ldquo;you vs you&rdquo; instead of athlete comparisons, everyday friction and what&apos;s holding people back, &ldquo;looks like cheating&rdquo; before breaking that, humour to show the gap between now and could-be.
+                For supplements and everyday users, the creative approach is the same: open where people already are, show what the product looks like in a normal routine, and let the before and after do the work. Not lab environments. Not elite athletes. Someone sleeping better, feeling more consistent, functioning the way they want to.
               </p>
             </div>
 
