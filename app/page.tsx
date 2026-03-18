@@ -1,15 +1,5 @@
 import VideoCard from "./components/VideoCard";
 import DirectionItem from "./components/DirectionItem";
-import WorkInfo from "./components/WorkInfo";
-
-const narrativeCard = {
-  embed: "https://player.vimeo.com/video/1137747617",
-  title: "Danny Dyer Euros",
-  summary: "A culturally tuned ad that speaks with the audience, not at them.",
-  context: "Danny Dyer explores England's relationship with Europe in a relatable tone.",
-  lens: "Talk to people like they already understand.",
-  category: "Cultural",
-};
 
 const productCards = [
   {
@@ -73,7 +63,7 @@ export default function Home() {
           Jack Brady
         </div>
         <div className="nav-links">
-          <a href="#narrative" className="nav-link">Work</a>
+          <a href="#product" className="nav-link">Work</a>
           <a href="#enhanced" className="nav-link">Ideas</a>
           <a href="mailto:jack@jackbradyfilm.co.uk" className="nav-link">Contact</a>
         </div>
@@ -181,21 +171,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── NARRATIVE / CULTURAL — white bg ── */}
-      <section id="narrative" style={{
-        background: "#FAF9F5",
-        paddingTop: "44px",
-        paddingBottom: "56px",
-        borderBottom: "1px solid rgba(0,0,0,0.07)",
-      }}>
-        <div className="container">
-          <WorkInfo />
-          <div className="video-grid-featured">
-            <VideoCard {...narrativeCard} />
-          </div>
-        </div>
-      </section>
-
       {/* ── PRODUCT / SOCIAL ── */}
       <section id="product" style={{
         background: "#0a0a0a",
@@ -205,7 +180,7 @@ export default function Home() {
       }}>
         <div className="container">
           <p className="section-label">Product / Social</p>
-          <div className="video-grid">
+          <div className="video-grid-product">
             {productCards.map(c => <VideoCard key={c.title} {...c} />)}
           </div>
         </div>

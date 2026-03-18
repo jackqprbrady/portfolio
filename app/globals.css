@@ -119,6 +119,12 @@ body {
   max-width: 100%;
 }
 
+.video-grid-product {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
 /* ─── HERO GRID ─── */
 .hero-grid {
   display: grid;
