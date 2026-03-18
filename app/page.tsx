@@ -13,6 +13,22 @@ const narrativeCard = {
 
 const productCards = [
   {
+    embed: "https://www.youtube.com/embed/Gc-e9t_cguQ",
+    title: "Come Out and Play",
+    summary: "A product reframe built for an everyday audience.",
+    context: "Gemma Collins and Coleen Rooney alongside Danny Dyer. The premise reframes online casino as a fun night in. The ambassadors speak directly to the moms and everyday women demographic Enhanced is describing.",
+    lens: "Same emotional register as wellness and lifestyle brands. Different category.",
+    category: "Lifestyle",
+  },
+  {
+    embed: "https://news.paddypower.com/assets/uploads/2023/12/Paddy-Power_Product-Video_uk-B-Version-MBT.mp4",
+    title: "Money Back Tokens",
+    summary: "Step-by-step product walkthrough built for retention.",
+    context: "App UI simulation, on-screen captions, clear action steps. The same format as supplement onboarding, app tutorials, and lifecycle email sequences.",
+    lens: "This is lifecycle content. The category just happens to be betting.",
+    category: "Lifecycle",
+  },
+  {
     embed: "https://news.paddypower.com/assets/uploads/2021/10/PP-games-edit-600s-400-221021.mp4",
     title: "Games: Favourites",
     summary: "An app feature demo in the style of a wellness tutorial.",
@@ -35,22 +51,6 @@ const productCards = [
     context: "A scenario-driven ad showing how game features give players another chance. The lead character is a mum. The sell is reassurance, not excitement.",
     lens: "When the audience is a parent, the emotional register changes. This does that.",
     category: "Conversion",
-  },
-  {
-    embed: "https://www.youtube.com/embed/Gc-e9t_cguQ",
-    title: "Come Out and Play",
-    summary: "A product reframe built for an everyday audience.",
-    context: "Gemma Collins and Coleen Rooney alongside Danny Dyer. The premise reframes online casino as a fun night in. The ambassadors speak directly to the moms and everyday women demographic Enhanced is describing.",
-    lens: "Same emotional register as wellness and lifestyle brands. Different category.",
-    category: "Lifestyle",
-  },
-  {
-    embed: "https://news.paddypower.com/assets/uploads/2023/12/Paddy-Power_Product-Video_uk-B-Version-MBT.mp4",
-    title: "Money Back Tokens",
-    summary: "Step-by-step product walkthrough built for retention.",
-    context: "App UI simulation, on-screen captions, clear action steps. The same format as supplement onboarding, app tutorials, and lifecycle email sequences.",
-    lens: "This is lifecycle content. The category just happens to be betting.",
-    category: "Lifecycle",
   },
 ];
 
