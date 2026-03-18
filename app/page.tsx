@@ -19,20 +19,20 @@ const productCards = [
     category: "Lifecycle",
   },
   {
-    embed: "https://news.paddypower.com/assets/uploads/2021/10/PP-games-edit-600s-400-221021.mp4",
-    title: "Games: Favourites",
-    summary: "An app feature demo in the style of a wellness tutorial.",
-    context: "Bright text, hand-on-phone footage, routine-first framing. The visual language mirrors how lifestyle and DTC brands explain a new habit.",
-    lens: "The format is already DTC. The audience is the only thing that changes.",
-    category: "App Demo",
-  },
-  {
     embed: "https://news.paddypower.com/assets/uploads/2024/02/PP-Supersub-16x9-23s.mp4",
     title: "Super Sub",
     summary: "A product mechanic built around pre-empting the objection.",
     context: "23-second vertical video that addresses the 'what if my player gets subbed off' anxiety before users raise it. Mobile-first, caption-led, no wasted seconds.",
     lens: "Pre-empting the objection is a lifecycle skill, not a sports one.",
     category: "Product",
+  },
+  {
+    embed: "https://news.paddypower.com/assets/uploads/2021/10/PP-games-edit-600s-400-221021.mp4",
+    title: "Games: Favourites",
+    summary: "An app feature demo in the style of a wellness tutorial.",
+    context: "Bright text, hand-on-phone footage, routine-first framing. The visual language mirrors how lifestyle and DTC brands explain a new habit.",
+    lens: "The format is already DTC. The audience is the only thing that changes.",
+    category: "App Demo",
   },
   {
     embed: "https://player.vimeo.com/video/674099053",
