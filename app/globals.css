@@ -109,6 +109,16 @@ body {
   gap: 14px;
 }
 
+.video-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.video-grid-featured {
+  max-width: 560px;
+}
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -252,6 +262,8 @@ body {
   .nav-links { display: none; }
   .container { padding: 0 20px; }
   .video-grid { grid-template-columns: 1fr; }
+  .video-grid-two { grid-template-columns: 1fr; }
+  .video-grid-featured { max-width: 100%; }
   .footer-wordmark { font-size: clamp(3rem, 15vw, 6rem); padding: 32px 20px 16px; }
 }
 
