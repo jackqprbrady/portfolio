@@ -13,14 +13,6 @@ const narrativeCard = {
 
 const productCards = [
   {
-    embed: "https://player.vimeo.com/video/674099053",
-    title: "Paddy Power Games: Mum",
-    summary: "Product features explained through a relatable moment.",
-    context: "A scenario-driven ad showing how game features give players another chance. The lead character is a mum. The sell is reassurance, not excitement.",
-    lens: "When the audience is a parent, the emotional register changes. This does that.",
-    category: "Conversion",
-  },
-  {
     embed: "https://news.paddypower.com/assets/uploads/2023/12/Paddy-Power_Product-Video_uk-B-Version-MBT.mp4",
     title: "Money Back Tokens",
     summary: "Step-by-step product walkthrough built for retention.",
@@ -43,6 +35,14 @@ const productCards = [
     context: "23-second vertical video that addresses the 'what if my player gets subbed off' anxiety before users raise it. Mobile-first, caption-led, no wasted seconds.",
     lens: "Pre-empting the objection is a lifecycle skill, not a sports one.",
     category: "Product",
+  },
+  {
+    embed: "https://player.vimeo.com/video/674099053",
+    title: "Paddy Power Games: Mum",
+    summary: "Product features explained through a relatable moment.",
+    context: "A scenario-driven ad showing how game features give players another chance. The lead character is a mum. The sell is reassurance, not excitement.",
+    lens: "When the audience is a parent, the emotional register changes. This does that.",
+    category: "Conversion",
   },
 ];
 
