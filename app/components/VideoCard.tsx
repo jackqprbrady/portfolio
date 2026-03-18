@@ -18,7 +18,11 @@ export default function VideoCard({ embed, title, summary, context, lens, catego
   return (
     <div className="video-card">
       <div className="video-wrapper">
-        <iframe src={embed} title={title} allowFullScreen allow="fullscreen; picture-in-picture" />
+        {embed.includes(".mp4") ? (
+          <video src={embed} controls playsInline preload="metadata" />
+        ) : (
+          <iframe src={embed} title={title} allowFullScreen allow="fullscreen; picture-in-picture" />
+        )}
         <span className="video-tag">{category}</span>
       </div>
 
