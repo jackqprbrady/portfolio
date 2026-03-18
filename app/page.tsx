@@ -2,32 +2,14 @@ import VideoCard from "./components/VideoCard";
 import DirectionItem from "./components/DirectionItem";
 import WorkInfo from "./components/WorkInfo";
 
-const narrativeCards = [
-  {
-    embed: "https://player.vimeo.com/video/349462517",
-    title: "Save Our Shirt",
-    summary: "A fake outrage stunt that flipped into a pro-fan reveal.",
-    context: "A hoax football kit with a huge sponsor provoked outrage before revealing the real campaign was to unsponsor the shirt.",
-    lens: "Provoke attention first, then reframe it.",
-    category: "Narrative",
-  },
-  {
-    embed: "https://player.vimeo.com/video/332046704",
-    title: "Rhodri Giggs: Loyalty's Dead",
-    summary: "A story-led ad that never directly sells the product.",
-    context: "Rhodri Giggs fronts a campaign about rewards vs loyalty without mentioning betting.",
-    lens: "Let personality and narrative carry the message.",
-    category: "Narrative",
-  },
-  {
-    embed: "https://player.vimeo.com/video/1137747617",
-    title: "Danny Dyer Euros",
-    summary: "A culturally tuned ad that speaks with the audience, not at them.",
-    context: "Danny Dyer explores England's relationship with Europe in a relatable tone.",
-    lens: "Talk to people like they already understand.",
-    category: "Cultural",
-  },
-];
+const narrativeCard = {
+  embed: "https://player.vimeo.com/video/1137747617",
+  title: "Danny Dyer Euros",
+  summary: "A culturally tuned ad that speaks with the audience, not at them.",
+  context: "Danny Dyer explores England's relationship with Europe in a relatable tone.",
+  lens: "Talk to people like they already understand.",
+  category: "Cultural",
+};
 
 const productCards = [
   {
@@ -55,28 +37,12 @@ const productCards = [
     category: "App Demo",
   },
   {
-    embed: "https://news.paddypower.com/wp-content/uploads/2022/11/PP-BB-600x500-v2.mp4",
-    title: "Bet Builder",
-    summary: "A 20-second product explainer built for the feed.",
-    context: "Bold type, simple animation, square format. Explains a complex product mechanic in one scroll-stop. No voiceover, no setup.",
-    lens: "Snackable product education is the same skill whatever you are selling.",
-    category: "Explainer",
-  },
-  {
     embed: "https://news.paddypower.com/assets/uploads/2024/02/PP-Supersub-16x9-23s.mp4",
     title: "Super Sub",
     summary: "A product mechanic built around pre-empting the objection.",
     context: "23-second vertical video that addresses the 'what if my player gets subbed off' anxiety before users raise it. Mobile-first, caption-led, no wasted seconds.",
     lens: "Pre-empting the objection is a lifecycle skill, not a sports one.",
     category: "Product",
-  },
-  {
-    embed: "https://news.paddypower.com/wp-content/uploads/2022/12/BonanzaMegapays_MegaJackpot_06-12-2022_v001.mp4",
-    title: "Jackpot Win: Bonanza Megapays",
-    summary: "UGC-style product capture that shows the moment, not the pitch.",
-    context: "A real player hitting a mega jackpot, captured as screen footage. No studio, no voiceover. The product does the work.",
-    lens: "When the product is the story, get out of the way.",
-    category: "Social",
   },
 ];
 
@@ -216,8 +182,8 @@ export default function Home() {
       }}>
         <div className="container">
           <WorkInfo />
-          <div className="video-grid">
-            {narrativeCards.map(c => <VideoCard key={c.title} {...c} />)}
+          <div className="video-grid-featured">
+            <VideoCard {...narrativeCard} />
           </div>
         </div>
       </section>
@@ -231,7 +197,7 @@ export default function Home() {
       }}>
         <div className="container">
           <p className="section-label">Product / Social</p>
-          <div className="video-grid">
+          <div className="video-grid-two">
             {productCards.map(c => <VideoCard key={c.title} {...c} />)}
           </div>
         </div>
