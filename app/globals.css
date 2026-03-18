@@ -119,6 +119,16 @@ body {
   max-width: 560px;
 }
 
+.video-grid-product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.video-grid-product .video-card:first-child {
+  grid-column: 1 / -1;
+}
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -264,6 +274,8 @@ body {
   .video-grid { grid-template-columns: 1fr; }
   .video-grid-two { grid-template-columns: 1fr; }
   .video-grid-featured { max-width: 100%; }
+  .video-grid-product { grid-template-columns: 1fr; }
+  .video-grid-product .video-card:first-child { grid-column: 1; }
   .footer-wordmark { font-size: clamp(3rem, 15vw, 6rem); padding: 32px 20px 16px; }
 }
 
