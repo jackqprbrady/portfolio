@@ -64,7 +64,7 @@ export default function Home() {
           <p className="hero-sub">
             I run digital content at <b>Paddy Power News</b>, the betting brand&apos;s editorial site.
             Eight years making sport and entertainment video people actually stop for:
-            shooting it, cutting it, designing it, getting it seen.
+            planning it, cutting it, designing it, getting it seen.
           </p>
           <div className="logobar">
             <span>Paddy Power</span><span>BT Sport</span><span>BFI</span>
