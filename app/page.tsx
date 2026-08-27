@@ -14,31 +14,31 @@ const roles = [
     company: "Paddy Power News",
     title: "Digital Content Manager",
     period: "2020 to Present",
-    description: "Sole video producer for the betting brand's editorial site. Grew it past 1M monthly visitors. Concept, shoot, edit, design, publish, measure.",
+    description: "Sole video producer for the betting brand's editorial site, now past 1M monthly visitors.",
   },
   {
     company: "British Film Institute",
     title: "Contract Video Producer / Editor",
     period: "2022 to 2023",
-    description: "Event capture and filmmaker interviews at BFI Southbank, cut for BFI's YouTube and socials.",
+    description: "Event capture and filmmaker interviews at BFI Southbank.",
   },
   {
     company: "British Library",
     title: "Freelance Video Producer / Editor",
     period: "2021 to 2022",
-    description: "Curator-led films for the Moving Image collection. Rights-aware archive work, full caption compliance.",
+    description: "Curator-led films for the Moving Image collection.",
   },
   {
     company: "Moonbug Entertainment",
     title: "Video Editor (Contract)",
     period: "2021 to 2022",
-    description: "Edited kids' programming for Netflix and Prime Video. Content reaching 100M+ households. High-volume monthly batches.",
+    description: "Edited kids' programming for Netflix and Prime Video, reaching 100M+ households.",
   },
   {
     company: "TNT Sports (BT Sport)",
     title: "Live Sports Videographer & Editor",
     period: "2017 to 2019",
-    description: "Shot and edited live football for national broadcast. Helped launch the National League highlights show from scratch.",
+    description: "Live football for national broadcast. Helped launch the National League highlights show.",
   },
 ];
 
@@ -117,13 +117,9 @@ export default function Home() {
           <div className="case-grid">
             <div className="case-copy">
               <h2>Famous faces, cut for the feed</h2>
-              <p><b>The brief.</b> Give the brand faces people stop scrolling for.</p>
-              <p><b>The work.</b> TikTok challenges and reactive moments with Peter Crouch,
-                Danny Dyer and Piers Morgan. I direct on set, protect what makes the talent
-                worth filming, and cut for the first two seconds.</p>
-              <p><b>The result.</b> Flagship social formats for a publication read by
-                over a million people a month. Every piece ships inside gambling
-                advertising rules, that part is second nature now.</p>
+              <p>TikTok challenges and reactive moments with Peter Crouch, Danny Dyer
+                and Piers Morgan. Directed on set, cut for the first two seconds,
+                shipped inside gambling advertising rules.</p>
             </div>
             <div className="case-media">
               <LoopTile
@@ -145,15 +141,8 @@ export default function Home() {
           <div className="case-grid flip">
             <div className="case-copy">
               <h2>One producer, one million readers</h2>
-              <p><b>The brief.</b> Make a betting brand&apos;s editorial site worth visiting daily.</p>
-              <p><b>The work.</b> I am the sole video producer and own the site&apos;s visual
-                identity: every video, thumbnail and title card across web and social,
-                shipped on matchday deadlines.</p>
-              <p><b>The result.</b> From launch to over <b>1M monthly visitors</b>.
-                This is the site as it looks today.</p>
-              <p className="case-award">Paddy Power content took Gold at the Football Content
-                Awards 2024 and two Golds at The Drum Awards 2025, with seven Marketing Week
-                Awards 2026 shortlists including Best Use of Social Media.</p>
+              <p>Sole video producer for the site. Every video, thumbnail and title
+                card across web and social, shipped on matchday deadlines.</p>
             </div>
             <div className="case-media">
               <ImageTile src="/design/ppnews-site.jpg" title="Paddy Power News, live homepage" />
@@ -166,7 +155,7 @@ export default function Home() {
       <section id="design" className="case-sec">
         <div className="container">
           <p className="section-label">Design for the feed</p>
-          <p className="design-intro">Matchday graphics, briefed and live the same day. All published work.</p>
+          <p className="design-intro">Matchday graphics, briefed and live the same day.</p>
           <div className="design-grid">
             {designWork.map(d => <ImageTile key={d.src} {...d} />)}
           </div>
@@ -216,8 +205,8 @@ export default function Home() {
         <div className="container">
           <p className="section-label">Also in the locker</p>
           <p className="design-intro">
-            Contract work for the BFI and the British Library: filmmaker talks, curator films,
-            archive-aware editing. Different register, same craft.
+            Contract work for the BFI and the British Library: filmmaker talks,
+            curator films, archive editing.
           </p>
           <div className="yt-grid">
             <div className="yt-wrap">
@@ -254,9 +243,8 @@ export default function Home() {
         <div className="container" style={{ textAlign: "center" }}>
           <h2 className="contact-h2">Let&apos;s make things people watch</h2>
           <p className="contact-sub">
-            Based in New York. I work fast, take a brief cleanly, and bring one idea
-            you did not ask for with every delivery. I also build small systems that
-            turn one shoot into a week of posts.
+            Based in New York. Fast, clean with a brief, always one extra idea
+            in the delivery.
           </p>
           <div className="contact-row">
             <a href="mailto:jack@jackbradyfilm.co.uk" className="btn-solid">jack@jackbradyfilm.co.uk</a>
