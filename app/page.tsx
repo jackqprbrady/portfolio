@@ -1,331 +1,276 @@
-import VideoCard from "./components/VideoCard";
-import DirectionItem from "./components/DirectionItem";
+import { LoopTile, ImageTile } from "./components/Media";
 
-const productCards = [
-  {
-    embed: "https://www.youtube.com/embed/Gc-e9t_cguQ",
-    title: "Come Out and Play",
-    summary: "A product reframe built for an everyday audience.",
-    context: "Gemma Collins and Coleen Rooney alongside Danny Dyer. The premise reframes online casino as a fun night in. The ambassadors speak directly to the moms and everyday women demographic Enhanced is describing.",
-    lens: "Same emotional register as wellness and lifestyle brands. Different category.",
-    category: "Lifestyle",
-  },
-  {
-    embed: "https://news.paddypower.com/assets/uploads/2023/12/Paddy-Power_Product-Video_uk-B-Version-MBT.mp4",
-    title: "Money Back Tokens",
-    summary: "Step-by-step product walkthrough built for retention.",
-    context: "App UI simulation, on-screen captions, clear action steps. The same format as supplement onboarding, app tutorials, and lifecycle email sequences.",
-    lens: "This is lifecycle content. The category just happens to be betting.",
-    category: "Lifecycle",
-  },
-  {
-    embed: "https://news.paddypower.com/assets/uploads/2024/02/PP-Supersub-16x9-23s.mp4",
-    title: "Super Sub",
-    summary: "A product mechanic built around pre-empting the objection.",
-    context: "23-second vertical video that addresses the 'what if my player gets subbed off' anxiety before users raise it. Mobile-first, caption-led, no wasted seconds.",
-    lens: "Pre-empting the objection is a lifecycle skill, not a sports one.",
-    category: "Product",
-  },
-  {
-    embed: "https://news.paddypower.com/assets/uploads/2021/10/PP-games-edit-600s-400-221021.mp4",
-    title: "Games: Favourites",
-    summary: "An app feature demo in the style of a wellness tutorial.",
-    context: "Bright text, hand-on-phone footage, routine-first framing. The visual language mirrors how lifestyle and DTC brands explain a new habit.",
-    lens: "The format is already DTC. The audience is the only thing that changes.",
-    category: "App Demo",
-  },
-  {
-    embed: "https://player.vimeo.com/video/674099053",
-    title: "Paddy Power Games: Mum",
-    summary: "Product features explained through a relatable moment.",
-    context: "A scenario-driven ad showing how game features give players another chance. The lead character is a mum. The sell is reassurance, not excitement.",
-    lens: "When the audience is a parent, the emotional register changes. This does that.",
-    category: "Conversion",
-  },
+const designWork = [
+  { src: "/design/crouchys-shouts.jpg", title: "Crouchy's Shouts, Premier League matchday" },
+  { src: "/design/golden-boot.jpg", title: "World Cup Golden Boot" },
+  { src: "/design/f1-monaco.jpg", title: "F1 Monaco Grand Prix" },
+  { src: "/design/boxing-markets.jpg", title: "Boxing betting markets explainer" },
+  { src: "/design/pl-new-rules.jpg", title: "Premier League new rules guide" },
+  { src: "/design/efl-bet-builder.jpg", title: "EFL matchday" },
 ];
 
-const directions = [
-  { label: "01", title: "Flip the exclusion" },
-  { label: "02", title: "You vs You" },
-  { label: "03", title: "Everyday friction" },
-  { label: "04", title: "Looks like cheating" },
-  { label: "05", title: "Humour as contrast" },
+const roles = [
+  {
+    company: "Paddy Power News",
+    title: "Digital Content Manager",
+    period: "2020 to Present",
+    description: "Sole video producer for the betting brand's editorial site. Grew it past 1M monthly visitors. Concept, shoot, edit, design, publish, measure.",
+  },
+  {
+    company: "British Film Institute",
+    title: "Contract Video Producer / Editor",
+    period: "2022 to 2023",
+    description: "Event capture and filmmaker interviews at BFI Southbank, cut for BFI's YouTube and socials.",
+  },
+  {
+    company: "British Library",
+    title: "Freelance Video Producer / Editor",
+    period: "2021 to 2022",
+    description: "Curator-led films for the Moving Image collection. Rights-aware archive work, full caption compliance.",
+  },
+  {
+    company: "Moonbug Entertainment",
+    title: "Video Editor (Contract)",
+    period: "2021 to 2022",
+    description: "Edited kids' programming for Netflix and Prime Video. Content reaching 100M+ households. High-volume monthly batches.",
+  },
+  {
+    company: "TNT Sports (BT Sport)",
+    title: "Live Sports Videographer & Editor",
+    period: "2017 to 2019",
+    description: "Shot and edited live football for national broadcast. Helped launch the National League highlights show from scratch.",
+  },
 ];
 
 export default function Home() {
   return (
     <main>
-
-      {/* ── NAV ── */}
+      {/* NAV */}
       <nav className="nav">
-        <div className="nav-logo">
-          <EnhancedMark color="rgba(255,255,255,0.75)" />
-          Jack Brady
-        </div>
+        <div className="nav-logo">Jack Brady</div>
         <div className="nav-links">
-          <a href="#product" className="nav-link">Work</a>
-          <a href="#enhanced" className="nav-link">Ideas</a>
-          <a href="mailto:jack@jackbradyfilm.co.uk" className="nav-link">Contact</a>
+          <a href="#work" className="nav-link">Work</a>
+          <a href="#design" className="nav-link">Design</a>
+          <a href="#experience" className="nav-link">Experience</a>
         </div>
-        <a href="mailto:jack@jackbradyfilm.co.uk" className="nav-cta">
-          Get in touch
-        </a>
+        <a href="mailto:jack@jackbradyfilm.co.uk" className="nav-cta">Get in touch</a>
       </nav>
 
-      {/* ── HERO ── */}
-      <section style={{
-        background: "var(--black)",
-        paddingTop: "100px",
-        paddingBottom: "64px",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
-      }}>
+      {/* HERO: positioning + a wall of playing vertical video. No clicks to see moving work. */}
+      <section className="hero-sec">
         <div className="container">
-
-          <p style={{
-            fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 700,
-            fontSize: "0.5625rem",
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.4)",
-            marginBottom: "24px",
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-          }}>
-            <span style={{ display: "block", width: "18px", height: "1px", background: "rgba(255,255,255,0.3)", flexShrink: 0 }} />
-            Enhanced Profile · Enhanced Marketing Design
+          <p className="kicker">Social video creative / New York</p>
+          <h1 className="hero-h1">Jack Brady</h1>
+          <p className="hero-sub">
+            I run digital content at <b>Paddy Power News</b>, the betting brand&apos;s editorial site.
+            Eight years making sport and entertainment video people actually stop for:
+            shooting it, cutting it, designing it, getting it seen.
           </p>
+          <div className="logobar">
+            <span>Paddy Power</span><span>BT Sport</span><span>BFI</span>
+            <span>British Library</span><span>Moonbug / Netflix</span>
+          </div>
 
-          {/* Name — full width */}
-          <h1 style={{
-            fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 800,
-            fontSize: "clamp(4.5rem, 10vw, 10rem)",
-            textTransform: "uppercase",
-            letterSpacing: "-0.04em",
-            lineHeight: 0.88,
-            color: "#fff",
-            marginBottom: "40px",
-          }}>
-            Jack Brady
-          </h1>
+          <div className="hero-wall">
+            <LoopTile
+              loop="/v/crouch-dyer-challenge-loop.mp4"
+              full="/v/crouch-dyer-challenge.mp4"
+              poster="/v/crouch-dyer-challenge-poster.jpg"
+              title="Peter Crouch and Danny Dyer, Finish the Line"
+              meta="TikTok challenge, shot and cut for vertical"
+              badge="Talent"
+            />
+            <LoopTile
+              loop="/v/fan-denial-loop.mp4"
+              full="/v/fan-denial.mp4"
+              poster="/v/fan-denial-poster.jpg"
+              title="Fan Denial"
+              meta="Vertical fan-format series"
+              badge="Series"
+            />
+            <LoopTile
+              loop="/v/prostate-campaign-loop.mp4"
+              full="/v/prostate-campaign.mp4"
+              poster="/v/prostate-campaign-poster.jpg"
+              title="Check Your Risk"
+              meta="Prostate cancer awareness, brand reach used for good"
+              badge="Campaign"
+            />
+          </div>
+          <p className="hero-note">Tap any tile for full video with sound.</p>
+        </div>
+      </section>
 
-          {/* Two-col: animated tagline left, stats + body right */}
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 360px",
-            gap: "64px",
-            alignItems: "center",
-          }}>
+      {/* NUMBERS */}
+      <section className="numbers-sec">
+        <div className="container numbers">
+          <div><b>1M+</b><span>monthly visitors, Paddy Power News</span></div>
+          <div><b>100M+</b><span>households reached, Moonbug for Netflix</span></div>
+          <div><b>8 yrs</b><span>broadcast to vertical, end to end</span></div>
+        </div>
+      </section>
 
-            {/* Animated tagline */}
-            <p className="tagline-animate" style={{
-              fontFamily: "var(--font-condensed), sans-serif",
-              fontWeight: 800,
-              fontSize: "clamp(1.25rem, 2.2vw, 2rem)",
-              textTransform: "uppercase",
-              letterSpacing: "-0.02em",
-              lineHeight: 1.05,
-              color: "rgba(255,255,255,0.75)",
-            }}>
-              Turning Skepticism Into Curiosity. And Curiosity Into Action.
-            </p>
+      {/* CASE: TALENT */}
+      <section id="work" className="case-sec">
+        <div className="container">
+          <p className="section-label">Talent-led social</p>
+          <div className="case-grid">
+            <div className="case-copy">
+              <h2>Famous faces, cut for the feed</h2>
+              <p><b>The brief.</b> Give the brand faces people stop scrolling for.</p>
+              <p><b>The work.</b> TikTok challenges and reactive moments with Peter Crouch,
+                Danny Dyer and Piers Morgan. I direct on set, protect what makes the talent
+                worth filming, and cut for the first two seconds.</p>
+              <p><b>The result.</b> Flagship social formats for a publication read by
+                over a million people a month. Every piece ships inside gambling
+                advertising rules, that part is second nature now.</p>
+            </div>
+            <div className="case-media">
+              <LoopTile
+                full="/v/piers-morgan-sausage-roll.mp4"
+                poster="/v/piers-morgan-sausage-roll-poster.jpg"
+                ratio="16/9"
+                title="Piers Morgan vs the vegan sausage roll"
+                meta="Reactive celebrity moment"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Stats + body */}
-            <div>
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
-                paddingBottom: "24px",
-                borderBottom: "1px solid rgba(255,255,255,0.08)",
-                marginBottom: "24px",
-              }}>
-                {[
-                  { num: "6+", label: "Years" },
-                  { num: "100k+", label: "Video/imagery assets" },
-                  { num: "200M+", label: "Views across social" },
-                ].map(s => (
-                  <div key={s.num}>
-                    <p style={{
-                      fontFamily: "var(--font-condensed), sans-serif",
-                      fontWeight: 800,
-                      fontSize: "2.25rem",
-                      letterSpacing: "-0.04em",
-                      color: "#fff",
-                      lineHeight: 1,
-                      marginBottom: "5px",
-                    }}>{s.num}</p>
-                    <p style={{
-                      fontFamily: "var(--font-condensed), sans-serif",
-                      fontWeight: 600,
-                      fontSize: "0.5rem",
-                      letterSpacing: "0.16em",
-                      textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.35)",
-                    }}>{s.label}</p>
-                  </div>
-                ))}
+      {/* CASE: THE PUBLICATION */}
+      <section className="case-sec alt">
+        <div className="container">
+          <p className="section-label">Running the publication</p>
+          <div className="case-grid flip">
+            <div className="case-copy">
+              <h2>One producer, one million readers</h2>
+              <p><b>The brief.</b> Make a betting brand&apos;s editorial site worth visiting daily.</p>
+              <p><b>The work.</b> I am the sole video producer and own the site&apos;s visual
+                identity: every video, thumbnail and title card across web and social,
+                shipped on matchday deadlines.</p>
+              <p><b>The result.</b> From launch to over <b>1M monthly visitors</b>.
+                This is the site as it looks today.</p>
+              <p className="case-award">Paddy Power content took Gold at the Football Content
+                Awards 2024 and two Golds at The Drum Awards 2025, with seven Marketing Week
+                Awards 2026 shortlists including Best Use of Social Media.</p>
+            </div>
+            <div className="case-media">
+              <ImageTile src="/design/ppnews-site.jpg" title="Paddy Power News, live homepage" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DESIGN GRID */}
+      <section id="design" className="case-sec">
+        <div className="container">
+          <p className="section-label">Design for the feed</p>
+          <p className="design-intro">Matchday graphics, briefed and live the same day. All published work.</p>
+          <div className="design-grid">
+            {designWork.map(d => <ImageTile key={d.src} {...d} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* CASE: EVENT + BRANDED */}
+      <section className="case-sec alt">
+        <div className="container">
+          <p className="section-label">Events and branded</p>
+          <div className="branded-grid">
+            <LoopTile
+              loop="/v/comedy-festival-loop.mp4"
+              full="/v/comedy-festival.mp4"
+              poster="/v/comedy-festival-poster.jpg"
+              ratio="16/9"
+              title="Paddy Power Comedy Festival"
+              meta="Multi-cam event capture, cut end to end"
+            />
+            <LoopTile
+              full="/v/games-mum.mp4"
+              poster="/v/games-mum-poster.jpg"
+              ratio="16/9"
+              title="Mum, 30 second TV spot"
+              meta="Directed, edited, delivered"
+            />
+            <LoopTile
+              full="/v/break-up.mp4"
+              poster="/v/break-up-poster.jpg"
+              ratio="16/9"
+              title="Break Up"
+              meta="Scenario short built around the turn"
+            />
+            <LoopTile
+              full="/v/drag-it-out.mp4"
+              poster="/v/drag-it-out-poster.jpg"
+              ratio="16/9"
+              title="Drag It Out"
+              meta="Short-form editorial cut"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* MORE WORK: institutional */}
+      <section className="case-sec">
+        <div className="container">
+          <p className="section-label">Also in the locker</p>
+          <p className="design-intro">
+            Contract work for the BFI and the British Library: filmmaker talks, curator films,
+            archive-aware editing. Different register, same craft.
+          </p>
+          <div className="yt-grid">
+            <div className="yt-wrap">
+              <iframe src="https://www.youtube.com/embed/joUKN8ezVio" title="BFI Screen Talk, Greta Gerwig" loading="lazy" allowFullScreen allow="fullscreen; picture-in-picture" />
+            </div>
+            <div className="yt-wrap">
+              <iframe src="https://www.youtube.com/embed/6FvtC6crmhU" title="British Library, Curators on Camera" loading="lazy" allowFullScreen allow="fullscreen; picture-in-picture" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section id="experience" className="case-sec alt">
+        <div className="container">
+          <p className="section-label">Experience</p>
+          <div className="roles">
+            {roles.map(r => (
+              <div key={r.company} className="role">
+                <div className="role-head">
+                  <p className="role-co">{r.company}</p>
+                  <p className="role-period">{r.period}</p>
+                </div>
+                <p className="role-title">{r.title}</p>
+                <p className="role-desc">{r.description}</p>
               </div>
-              <p style={{ fontSize: "0.9375rem", lineHeight: 1.75, color: "rgba(255,255,255,0.55)" }}>
-                Years in a category few people trust, making work that earns attention rather than demanding it. Product education, trust-building, objection handling. The creative mechanics transfer.
-              </p>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── PRODUCT / SOCIAL ── */}
-      <section id="product" style={{
-        background: "#0a0a0a",
-        paddingTop: "44px",
-        paddingBottom: "56px",
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
-      }}>
-        <div className="container">
-          <p className="section-label">Product / Social</p>
-          <div className="video-grid-product">
-            {productCards.map(c => <VideoCard key={c.title} {...c} />)}
+      {/* ABOUT + CONTACT */}
+      <section id="contact" className="contact-sec">
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 className="contact-h2">Let&apos;s make things people watch</h2>
+          <p className="contact-sub">
+            Based in New York. I work fast, take a brief cleanly, and bring one idea
+            you did not ask for with every delivery. I also build small systems that
+            turn one shoot into a week of posts.
+          </p>
+          <div className="contact-row">
+            <a href="mailto:jack@jackbradyfilm.co.uk" className="btn-solid">jack@jackbradyfilm.co.uk</a>
+            <a href="https://www.linkedin.com/in/jack-b-66a983105/" target="_blank" rel="noopener" className="btn-line">LinkedIn</a>
           </div>
         </div>
       </section>
 
-      {/* ── ON ENHANCED ── */}
-      <section id="enhanced" style={{ background: "var(--blue)", paddingTop: "96px", paddingBottom: "80px", position: "relative", overflow: "hidden" }}>
-
-        {/* Ghost watermark */}
-        <div style={{
-          position: "absolute",
-          bottom: "-80px",
-          right: "-40px",
-          fontFamily: "var(--font-condensed), sans-serif",
-          fontWeight: 800,
-          fontSize: "clamp(8rem, 22vw, 24rem)",
-          textTransform: "uppercase",
-          letterSpacing: "-0.04em",
-          lineHeight: 1,
-          color: "rgba(255,255,255,0.04)",
-          pointerEvents: "none",
-          userSelect: "none",
-        }}>
-          Enhanced
-        </div>
-
-        <div className="container" style={{ position: "relative" }}>
-
-          {/* Label row */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "40px" }}>
-            <EnhancedMark color="rgba(255,255,255,0.5)" size={26} />
-            <span style={{
-              fontFamily: "var(--font-condensed), sans-serif",
-              fontWeight: 800,
-              fontSize: "0.625rem",
-              letterSpacing: "0.25em",
-              textTransform: "uppercase",
-              color: "rgba(255,255,255,0.5)",
-            }}>Enhanced</span>
-          </div>
-
-          {/* Section title */}
-          <h2 style={{
-            fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 800,
-            fontSize: "clamp(2.75rem, 5vw, 5rem)",
-            textTransform: "uppercase",
-            letterSpacing: "-0.04em",
-            lineHeight: 0.9,
-            color: "#fff",
-            marginBottom: "16px",
-          }}>
-            Early Thoughts
-          </h2>
-          <p style={{
-            fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 700,
-            fontSize: "0.875rem",
-            letterSpacing: "0.06em",
-            textTransform: "uppercase",
-            color: "rgba(255,255,255,0.5)",
-            marginBottom: "56px",
-          }}>
-            How this could be framed for the everyday person
-          </p>
-
-          {/* Two-col: body copy left, directions right */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "72px", alignItems: "start" }}>
-
-            {/* Body copy */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                  <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                The work above is the bridge. Gemma Collins and Coleen Rooney reframing casino as a fun night in. That is the moms and everyday women demographic. Money Back Tokens is a retention sequence. Favourites is an app onboarding tutorial. Super Sub is objection-handling. Same formats, same psychology as DTC lifecycle. Different category.
-              </p>
-              <p style={{ fontSize: "0.9375rem", lineHeight: 1.8, color: "rgba(255,255,255,0.72)" }}>
-                For supplements and everyday users, the creative approach is the same: open where people already are, show what the product looks like in a normal routine, and let the before and after do the work. Not lab environments. Not elite athletes. Someone sleeping better, feeling more consistent, functioning the way they want to.
-              </p>
-            </div>
-
-            {/* Directions — accordion */}
-            <div style={{ paddingTop: "4px" }}>
-              <p style={{
-                fontFamily: "var(--font-condensed), sans-serif",
-                fontWeight: 700,
-                fontSize: "0.5rem",
-                textTransform: "uppercase",
-                letterSpacing: "0.22em",
-                color: "rgba(255,255,255,0.4)",
-                marginBottom: "4px",
-                borderTop: "1px solid rgba(255,255,255,0.12)",
-                paddingTop: "18px",
-              }}>Directions</p>
-              {directions.map(d => (
-                <DirectionItem key={d.label} label={d.label} title={d.title} />
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ── FOOTER ── */}
-      <footer style={{ background: "#FAF9F5" }}>
-        <div style={{ borderBottom: "1px solid rgba(0,0,0,0.08)", overflow: "hidden" }}>
-          <span style={{
-            fontFamily: "var(--font-condensed), sans-serif",
-            fontWeight: 800,
-            fontSize: "clamp(5rem, 17vw, 18rem)",
-            textTransform: "uppercase",
-            letterSpacing: "-0.04em",
-            lineHeight: 0.85,
-            color: "#000",
-            display: "block",
-            padding: "48px 40px 16px",
-            overflow: "hidden",
-          }}>Jack Brady</span>
-        </div>
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 56px" }}>
-          <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontWeight: 700, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(0,0,0,0.3)" }}>
-            Jack Brady · 2026
-          </p>
-          <p style={{ fontFamily: "var(--font-condensed), sans-serif", fontWeight: 700, fontSize: "0.5rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(0,0,0,0.3)" }}>
-            ≡+ Enhanced Games · Las Vegas · May 2026
-          </p>
+      <footer className="site-foot">
+        <div className="container foot-in">
+          <p>Jack Brady / 2026</p>
+          <p>New York, NY</p>
         </div>
       </footer>
-
     </main>
-  );
-}
-
-function EnhancedMark({ color = "#1A04FF", size = 18 }: { color?: string; size?: number }) {
-  const h = Math.round(size * 14 / 18);
-  return (
-    <svg width={size} height={h} viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-      <rect y="0" width="10" height="2" fill={color} />
-      <rect y="6" width="10" height="2" fill={color} />
-      <rect y="12" width="10" height="2" fill={color} />
-      <rect x="13" y="4" width="2" height="6" fill={color} />
-      <rect x="10" y="7" width="8" height="2" fill={color} />
-    </svg>
   );
 }
