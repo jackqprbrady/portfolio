@@ -17,8 +17,8 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Jack Brady: Enhanced Profile",
-  description: "Turning skepticism into curiosity, and curiosity into action.",
+  title: "Jack Brady | Social Video Creative",
+  description: "Social-first video creative running digital content at Paddy Power News. Talent-led video, design, and short-form for sport and entertainment. Based in New York.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
