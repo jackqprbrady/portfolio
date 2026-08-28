@@ -242,10 +242,7 @@ export default function Home() {
       <section id="contact" className="contact-sec">
         <div className="container" style={{ textAlign: "center" }}>
           <h2 className="contact-h2">Let&apos;s make things people watch</h2>
-          <p className="contact-sub">
-            Based in New York. Fast, clean with a brief, always one extra idea
-            in the delivery.
-          </p>
+          <p className="contact-sub">Based in New York.</p>
           <div className="contact-row">
             <a href="mailto:jack@jackbradyfilm.co.uk" className="btn-solid">jack@jackbradyfilm.co.uk</a>
             <a href="https://www.linkedin.com/in/jack-b-66a983105/" target="_blank" rel="noopener" className="btn-line">LinkedIn</a>
